@@ -65,8 +65,8 @@ PEM fuel cells (可逆PEM燃料电池建模及切换过程系统效率分析研�
 - *2020.10* Undergraduate Second-Class Scholarship, XJTU.
 
 # 📖 Educations
-- *2023.09 - 2026.06*, Xi'an Jiaotong University, M.Eng. in Electrical Engineering, supervised by <a href="https://gr.xjtu.edu.cn/en/web/wukai/1" target="_blank">Prof. Kai Wu</a> and <a href="https://gr.xjtu.edu.cn/en/web/zhoujun/home" target="_blank">Assoc. Prof. Jun Zhou</a>. 
-- *2019.09 - 2023.06*, Xi'an Jiaotong University, B.E. in Electrical Engineering and Automation, Undergrad thesis supervised by <a href="https://gr.xjtu.edu.cn/en/web/lxjia/1" target="_blank">Prof. Lixin Jia</a>. 
+- *2023.09 - 2026.06*, <a href="https://www.xjtu.edu.cn/" target="_blank">Xi'an Jiaotong University, M.Eng. in Electrical Engineering, supervised by <a href="https://gr.xjtu.edu.cn/en/web/wukai/1" target="_blank">Prof. Kai Wu</a> and <a href="https://gr.xjtu.edu.cn/en/web/zhoujun/home" target="_blank">Assoc. Prof. Jun Zhou</a>. 
+- *2019.09 - 2023.06*, <a href="https://www.xjtu.edu.cn/" target="_blank">Xi'an Jiaotong University, B.E. in Electrical Engineering and Automation, Undergrad thesis supervised by <a href="https://gr.xjtu.edu.cn/en/web/lxjia/1" target="_blank">Prof. Lixin Jia</a>. 
 
 # 🚩 Academic Activities
 - 2024.04, Participated in the 2024 9th Asia Conference on Power and Electrical Engineering (ACPEE 2024) and delivered a poster presentation, Shanghai, China.
