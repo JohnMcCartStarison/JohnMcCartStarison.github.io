@@ -31,12 +31,14 @@ My research interests include:
 # 📝 Publications 
 ## Journal Papers
 - **Chengze Ji**, Jun Zhou<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>, Xuhui Song, Ruhuan Li, Cunxin Li, Yuan Gao, Ke Deng, Zekai Chen, Shuo Wu, Wei Shen, Kai Wu<sup>[📧](mailto:wukai@mail.xjtu.edu.cn)</sup>. Dynamic modeling and optimal control of switching modes in reversible solid oxide cells for integrated electric-hydrogen energy system[J]. **Applied Energy**, 2025, 397: 126270. [View Paper →](https://doi.org/10.1016/j.apenergy.2025.126270)
-- **Chengze Ji**, Zheng Zong, Yangyang Ge, Xiaotong Zhang, Kai Wu, Jun Zhou<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>. Transient Characteristics and Current Overshoot Mechanism of Reversible Solid Oxide Cells 
-During Bidirectional Mode Switching Between Power Generation and Hydrogen Production (可逆固体氧化物电池电-氢双向瞬态转换特性及电流超调机制)[J]. **High Voltage Engineering (高电压技术)**, 2025, 51(05): 2200-2209. [View Paper →](https://doi.org/10.13336/j.1003-6520.hve.20240432)
+- **Chengze Ji**, Zheng Zong, Yangyang Ge, Xiaotong Zhang, Kai Wu, Jun Zhou<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>. Transient characteristics and current overshoot mechanism of reversible solid oxide cells during bidirectional mode switching between power generation and hydrogen production (可逆固体氧化物电池电-氢双向瞬态转换特性及电流超调机制)[J]. **High Voltage Engineering (高电压技术)**, 2025, 51(05): 2200-2209. [View Paper →](https://doi.org/10.13336/j.1003-6520.hve.20240432)
+- Jun Zhou<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>, **Chengze Ji**, Ruhuan Li, Xuhui Song, Kai Wu, Yonghong Cheng. Recent development in the technology of water electrolysis and its applications to new power systems (电解水制氢技术发展现状及其在新型电力系统中的应用进展)[J]. **High Voltage Engineering (高电压技术)**,2025,51(05):2096-2113. [View Paper →](https://doi.org/10.13336/j.1003-6520.hve.20242050)
+
+
 
 ## Conference Papers
-- **Chengze Ji**, Jun Zhou<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>, Kai Wu, Zheng Zong. Research on Current Density Overshoot of Reversible Solid Oxide Cell During Mode Switching[C]//2024 9th Asia Conference on Power and Electrical Engineering (**ACPEE**). IEEE, 2024: 2706-2710. [View Paper →](https://doi.org/10.1109/ACPEE60788.2024.10532327)
-- Ruhuan Li, Jun Zhou<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>, Zitong Qiu, **Chengze Ji**. Optimization of an Integrated Energy System with Reversible Solid Oxide Cell Based on Shapley's Value Method[C]//2024 3rd Asia Power and Electrical Technology Conference (**APET**). IEEE, 2024: 786-791. [View Paper →](https://doi.org/10.1109/APET63768.2024.10882793)
+- **Chengze Ji**, Jun Zhou<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>, Kai Wu, Zheng Zong. Research on current density overshoot of reversible solid oxide cell during mode switching[C]//2024 9th Asia Conference on Power and Electrical Engineering (**ACPEE**). IEEE, 2024: 2706-2710. [View Paper →](https://doi.org/10.1109/ACPEE60788.2024.10532327)
+- Ruhuan Li, Jun Zhou<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>, Zitong Qiu, **Chengze Ji**. Optimization of an integrated energy system with reversible solid oxide cell based on shapley's value method[C]//2024 3rd Asia Power and Electrical Technology Conference (**APET**). IEEE, 2024: 786-791. [View Paper →](https://doi.org/10.1109/APET63768.2024.10882793)
 
 ## Patents
 
