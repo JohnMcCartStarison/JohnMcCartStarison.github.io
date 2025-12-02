@@ -52,9 +52,5 @@ My research interests include:
 - *2023.09 - 2026.06*, Xi'an Jiaotong University, M.Eng. in Electrical Engineering, supervised by <a href="https://gr.xjtu.edu.cn/en/web/wukai/1" target="_blank">Prof. Kai Wu</a> and <a href="https://gr.xjtu.edu.cn/en/web/zhoujun/home" target="_blank">Assoc. Prof. Jun Zhou</a>. 
 - *2019.09 - 2023.06*, Xi'an Jiaotong University, B.E. in Electrical Engineering and Automation, undergraduate thesis supervised by <a href="https://gr.xjtu.edu.cn/en/web/lxjia/1" target="_blank">Prof. Lixin Jia</a>. 
 
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
-
-# 💻 Internships
+# 🚩 Academic activities
 - *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
