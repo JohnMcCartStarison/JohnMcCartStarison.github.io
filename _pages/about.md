@@ -51,11 +51,23 @@ PEM fuel cells (可逆PEM燃料电池建模及切换过程系统效率分析研�
 
 
 # 🎖 Honors and Awards
-- *2025.11* National Scholarship. 
+- *2025.11* National Scholarship.
+- *2025.09* National Second Prize, The 12th China Graduate Energy Equipment Innovation Design Competition.
+- *2025.09* Gold Award, China International College Students’ Innovation Competition (Shaanxi Province).
+- *2025.08* First Prize, The 20th China Postgraduate Electronic Design Competition (Northwest Part).
+- *2025.01* "Far East" First-Class Social Scholarship.
+- *2024.11* Postgraduate Special-Class Scholarship, XJTU.
+- *2023.10* Postgraduate Special-Class Scholarship, XJTU.
+- *2023.01* Second Prize, The 12th Asia and Pacific Mathematical Contest in Modeling. 
+- *2022.10* Undergraduate Third-Class Scholarship, XJTU.
+- *2022.08* National Second Prize, The 14th "CSEE Cup" National University Students Electrical Mathematical Modeling Competition.
+- *2021.10* Undergraduate Second-Class Scholarship, XJTU.
+- *2020.10* Undergraduate Second-Class Scholarship, XJTU.
 
 # 📖 Educations
 - *2023.09 - 2026.06*, Xi'an Jiaotong University, M.Eng. in Electrical Engineering, supervised by <a href="https://gr.xjtu.edu.cn/en/web/wukai/1" target="_blank">Prof. Kai Wu</a> and <a href="https://gr.xjtu.edu.cn/en/web/zhoujun/home" target="_blank">Assoc. Prof. Jun Zhou</a>. 
 - *2019.09 - 2023.06*, Xi'an Jiaotong University, B.E. in Electrical Engineering and Automation, Undergrad thesis supervised by <a href="https://gr.xjtu.edu.cn/en/web/lxjia/1" target="_blank">Prof. Lixin Jia</a>. 
 
 # 🚩 Academic Activities
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+- *2024.04, Participated in the 2024 9th Asia Conference on Power and Electrical Engineering (ACPEE 2024) and delivered a poster presentation, Shanghai, China.
+- *2024.01 - 2024.02*, Winter academic visit at Khalifa University, Abu Dhabi, UAE.
