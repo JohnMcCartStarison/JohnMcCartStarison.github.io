@@ -30,9 +30,11 @@ My research interests include:
 
 # 📝 Publications 
 ## Journal Papers
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
-- **Chengze Ji**, Jun Zhou, Xuhui Song, Ruhuan Li, Cunxin Li, Yuan Gao, Ke Deng, Zekai Chen, Shuo Wu, Wei Shen, Kai Wu. Dynamic modeling and optimal control of switching modes in reversible solid oxide cells for integrated electric-hydrogen energy system[J]. Applied Energy, 2025, 397: 126270. [Read More →](https://doi.org/10.1016/j.apenergy.2025.126270)
+- **Chengze Ji**, Jun Zhou, Xuhui Song, Ruhuan Li, Cunxin Li, Yuan Gao, Ke Deng, Zekai Chen, Shuo Wu, Wei Shen, Kai Wu. Dynamic modeling and optimal control of switching modes in reversible solid oxide cells for integrated electric-hydrogen energy system[J]. **Applied Energy**, 2025, 397: 126270. [Read More →](https://doi.org/10.1016/j.apenergy.2025.126270)
+- 
 ## Conference Papers
+- Ruhuan Li, Jun Zhou, Zitong Qiu, **Chengze Ji**. Optimization of an Integrated Energy System with Reversible Solid Oxide Cell Based on Shapley's Value Method[C]//2024 3rd Asia Power and Electrical Technology Conference (**APET**). IEEE, 2024: 786-791. [Read More →](https://doi.org/10.1109/APET63768.2024.10882793)
+
 ## Patents
 
 
