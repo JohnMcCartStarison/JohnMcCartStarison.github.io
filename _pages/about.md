@@ -39,7 +39,7 @@ My research interests include:
 energy systems (面向电氢耦合能源系统的可逆固体氧化物电池研究进展)[J]. **Journal of Xi'an Jiaotong University (西安交通大学学报)**, 2025. 
 - Zitong Qiu, Xiaotong Zhang, Yangyang Ge, Ruhuan Li, Haonan Li, **Chengze Ji**, Kai Wu, Jun Zhou. Modeling and efficiency analysis of switching process in reversible
 PEM fuel cells (可逆PEM燃料电池建模及切换过程系统效率分析研究)[J]. **Chinese Journal of Power Sources (电源技术)**,2025,49(03):596-607. [View Paper →](https://doi.org/10.3969/j.issn.1002-087X.2025.03.018)
-
+- Junbo Wang, Ke Deng, Hongfei Zhao, Qi Tang, Yin Zhang, **Chengze Ji**, Jun Zhou<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>. Design and electric field simulation of porous electrodes for solid oxide electrolysis cell based on multiscale modeling (基于多尺度模拟的固体氧化物电解池多孔电极设计及电场仿真)[J]. **Journal of Ceramics (陶瓷学报)**,2025.
 
 
 
