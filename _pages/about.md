@@ -72,7 +72,7 @@ PEM fuel cells (可逆PEM燃料电池建模及切换过程系统效率分析研�
 - *2019.09 - 2023.06*, <a href="https://www.xjtu.edu.cn/" target="_blank">Xi'an Jiaotong University</a>, B.E. in Electrical Engineering and Automation, Undergrad thesis supervised by <a href="https://gr.xjtu.edu.cn/en/web/lxjia/1" target="_blank">Prof. Lixin Jia</a>. 
 
 # 🚩 Academic Activities
-- 2024.04, Poster presentation at the 9th Asia Conference on Power and Electrical Engineering (ACPEE 2024), Shanghai, China.
+- *2024.04*, Poster presentation at the 9th Asia Conference on Power and Electrical Engineering (ACPEE 2024), Shanghai, China.
 - *2024.01 - 2024.02*, Winter academic visit at Khalifa University, Abu Dhabi, UAE.
 
 # 🌍 A Little Bit of Me (Non-Academic Part)
