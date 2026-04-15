@@ -39,11 +39,16 @@ layout: compress
 
           </div>
          
-            <div style="margin-top:20px;">
-            <script type="text/javascript"
-              src="https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=n&d=vdOnDQAiOhWEfwaVChJ6_TSHdIkk5rK78Jd6KFi1Mw8">
+            <div style="margin-top:20px;" id="clustrmaps-counter"></div>
+
+            <script>
+                  document.addEventListener("DOMContentLoaded", function() {
+                  var s = document.createElement("script");
+                  s.src = "https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=n&d=vdOnDQAiOhWEfwaVChJ6_TSHdIkk5rK78Jd6KFi1Mw8";
+                  s.async = true;
+              document.getElementById("clustrmaps-counter").appendChild(s);
+              });
             </script>
-            </div>
 
         </footer>
 
