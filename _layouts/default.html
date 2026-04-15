@@ -26,32 +26,35 @@ layout: compress
           
           <footer style="text-align:center; margin-top:40px;">
 
-            <p><strong>Visitor Globe</strong></p>
-
-            <div style="width:260px; margin:0 auto;">
-
-            <div id="clustrmaps-globe"></div>
-
-            <script type="text/javascript"
-              id="clstr_globe"
-              src="//clustrmaps.com/globe.js?d=vdOnDQAiOhWEfwaVChJ6_TSHdIkk5rK78Jd6KFi1Mw8">
-            </script>
-
-          </div>
-         
-            <div style="margin-top:20px;" id="clustrmaps-counter"></div>
-
-            <script>
-                  document.addEventListener("DOMContentLoaded", function() {
-                  var s = document.createElement("script");
-                  s.src = "https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=n&d=vdOnDQAiOhWEfwaVChJ6_TSHdIkk5rK78Jd6KFi1Mw8";
-                  s.async = true;
-              document.getElementById("clustrmaps-counter").appendChild(s);
-              });
-            </script>
-
-        </footer>
-
+            <p><strong>Visitor Statistics</strong></p>
+          
+            <div style="display:flex; justify-content:center; align-items:center; gap:40px; flex-wrap:wrap; margin-top:20px;">
+          
+              <!-- 🌍 Globe -->
+              <div style="width:260px;">
+                <div id="clustrmaps-globe"></div>
+          
+                <script type="text/javascript"
+                  id="clstr_globe"
+                  src="https://clustrmaps.com/globe.js?d=vdOnDQAiOhWEfwaVChJ6_TSHdIkk5rK78Jd6KFi1Mw8">
+                </script>
+              </div>
+          
+              <!-- 📊 Counter（稳定版） -->
+              <div>
+                <a href="https://clustrmaps.com/site/1c9qu" target="_blank" title="Visitor Counter">
+                  <img 
+                    src="https://www.clustrmaps.com/map_v2.png?d=vdOnDQAiOhWEfwaVChJ6_TSHdIkk5rK78Jd6KFi1Mw8&cl=dbeafe"
+                    style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                </a>
+                <p style="margin-top:10px; font-size:14px; color:#666;">
+                  Total Visits
+                </p>
+              </div>
+          
+            </div>
+          
+          </footer>
         </div>
       </article>
     </div>
