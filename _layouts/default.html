@@ -9,21 +9,18 @@ layout: compress
     {% include head/custom.html %}
 
     <style>
-      /* 强制缩小 Globe */
+      /* Globe容器 */
+      #globe-container{
+        width: 320px;
+        height: 320px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      /* 强制缩小MapMyVisitors Globe */
       .mmvst_outer{
-        width:30px !important;
-        height:30px !important;
-        margin:auto !important;
-      }
-
-      .mmvst_inner{
-        width:30px !important;
-        height:30px !important;
-      }
-
-      .mmvst_globe{
-        width:30px !important;
-        height:30px !important;
+        transform: scale(0.3);
+        transform-origin: top center;
       }
     </style>
 
@@ -56,11 +53,15 @@ layout: compress
 
               <h3>🌍 Visitor Statistics</h3>
 
-              <script
-                type="text/javascript"
-                id="mmvst_globe"
-                src="//mapmyvisitors.com/globe.js?d=6KroIV-3pry1d7NigozY0DVLmYX7XyYFp5T0FpAvGLs">
-              </script>
+              <div id="globe-container">
+
+                <script
+                  type="text/javascript"
+                  id="mmvst_globe"
+                  src="//mapmyvisitors.com/globe.js?d=6KroIV-3pry1d7NigozY0DVLmYX7XyYFp5T0FpAvGLs">
+                </script>
+
+              </div>
 
             </div>
 
