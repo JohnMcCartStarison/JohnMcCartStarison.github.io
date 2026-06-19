@@ -5,24 +5,27 @@ layout: compress
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
+
     {% include head.html %}
     {% include head/custom.html %}
 
     <style>
 
-      /* 缩小 MapMyVisitors Globe */
-      .mmvst_outer{
-        zoom:0.3;
-        margin:auto !important;
+      /* 外部控制区域大小，不修改MapMyVisitors内部 */
+      .globe-box{
+        width:320px;
+        height:320px;
+        margin:40px auto 0;
+        overflow:hidden;
+        position:relative;
       }
 
-      /* Chrome/Safari */
-      .mmvst_inner{
-        zoom:0.3;
-      }
-
-      .mmvst_globe{
-        zoom:0.3;
+      /* 移动巨大地球到中心 */
+      .globe-box .mmvst_outer{
+        position:absolute;
+        left:50%;
+        top:0;
+        transform:translateX(-50%);
       }
 
     </style>
@@ -31,6 +34,7 @@ layout: compress
 
 
   <body>
+
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
@@ -46,7 +50,7 @@ layout: compress
 
         {% if page.title %}
         <meta itemprop="headline"
-              content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">
+        content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">
         {% endif %}
 
 
@@ -62,17 +66,23 @@ layout: compress
             <hr>
 
 
-            <div style="text-align:center; margin-top:40px;">
+            <div style="text-align:center;margin-top:40px;">
 
 
               <h3>🌍 Visitor Statistics</h3>
 
 
-              <script
+              <div class="globe-box">
+
+
+                <script
                 type="text/javascript"
                 id="mmvst_globe"
                 src="//mapmyvisitors.com/globe.js?d=6KroIV-3pry1d7NigozY0DVLmYX7XyYFp5T0FpAvGLs">
-              </script>
+                </script>
+
+
+              </div>
 
 
             </div>
