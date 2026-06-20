@@ -7,41 +7,58 @@ layout: compress
 
 <head>
 
-  {% include head.html %}
-  {% include head/custom.html %}
+{% include head.html %}
+{% include head/custom.html %}
 
-  <style>
-
-    .visitor-container{
-      display:flex;
-      justify-content:center;
-      align-items:flex-start;
-      gap:50px;
-      flex-wrap:wrap;
-      margin-top:40px;
-    }
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/jsvectormap@1.3.3/dist/css/jsvectormap.min.css">
 
 
-    .travel-box,
-    .visitor-box{
-      text-align:center;
-    }
+<style>
+
+.visitor-container{
+
+display:flex;
+justify-content:center;
+align-items:flex-start;
+gap:50px;
+flex-wrap:wrap;
+margin-top:40px;
+
+}
 
 
-    .travel-map{
-      width:420px;
-      max-width:90vw;
-    }
+.travel-box,
+.visitor-box{
+
+text-align:center;
+
+}
 
 
-    .map-point{
-      fill:#ff6b00;
-      stroke:white;
-      stroke-width:2;
-    }
+#travel-map{
+
+width:500px;
+height:300px;
+}
 
 
-  </style>
+.jvm-region{
+
+fill:#d9e2ec;
+
+}
+
+
+.jvm-region.visited{
+
+fill:#ff6b00 !important;
+
+}
+
+
+</style>
+
 
 </head>
 
@@ -50,7 +67,6 @@ layout: compress
 
 
 {% include browser-upgrade.html %}
-
 {% include masthead.html %}
 
 
@@ -58,7 +74,6 @@ layout: compress
 
 
 {% include sidebar.html %}
-
 
 
 <article class="page"
@@ -72,7 +87,6 @@ itemtype="http://schema.org/CreativeWork">
 content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">
 
 {% endif %}
-
 
 
 <div class="page__inner-wrap">
@@ -89,14 +103,12 @@ itemprop="text">
 <hr>
 
 
+
 <div class="visitor-container">
 
 
 
-<!-- ======================
-     Travel Map
-====================== -->
-
+<!-- 左侧旅行地图 -->
 
 <div class="travel-box">
 
@@ -104,138 +116,7 @@ itemprop="text">
 <h3>🌎 Countries I've Visited</h3>
 
 
-<svg class="travel-map"
-viewBox="0 0 1000 500"
-xmlns="http://www.w3.org/2000/svg">
-
-
-<!-- 简化世界地图背景 -->
-
-<rect
-width="1000"
-height="500"
-fill="#f7f9fc"/>
-
-
-<!-- 大洲轮廓（简化） -->
-
-<path
-d="M100 180
-C150 80 300 80 390 160
-C420 220 350 280 250 260
-C170 260 100 230 100 180Z"
-fill="#d9e2ec"/>
-
-
-<path
-d="M430 120
-C520 60 700 90 760 170
-C800 240 650 280 520 250
-C450 220 410 160 430 120Z"
-fill="#d9e2ec"/>
-
-
-<path
-d="M520 300
-C620 260 760 300 820 390
-C720 450 560 420 500 350Z"
-fill="#d9e2ec"/>
-
-
-
-<!-- visited points -->
-
-
-<!-- China -->
-<circle
-cx="650"
-cy="220"
-r="10"
-class="map-point"/>
-
-
-<!-- Japan -->
-<circle
-cx="720"
-cy="230"
-r="10"
-class="map-point"/>
-
-
-<!-- Korea -->
-<circle
-cx="690"
-cy="210"
-r="10"
-class="map-point"/>
-
-
-<!-- Singapore -->
-<circle
-cx="640"
-cy="300"
-r="10"
-class="map-point"/>
-
-
-<!-- Malaysia -->
-<circle
-cx="620"
-cy="290"
-r="10"
-class="map-point"/>
-
-
-<!-- Thailand -->
-<circle
-cx="610"
-cy="260"
-r="10"
-class="map-point"/>
-
-
-<!-- UAE -->
-<circle
-cx="520"
-cy="270"
-r="10"
-class="map-point"/>
-
-
-<!-- UK -->
-<circle
-cx="430"
-cy="160"
-r="10"
-class="map-point"/>
-
-
-<!-- Turkey -->
-<circle
-cx="500"
-cy="230"
-r="10"
-class="map-point"/>
-
-
-<!-- Bosnia -->
-<circle
-cx="470"
-cy="210"
-r="10"
-class="map-point"/>
-
-
-<!-- Cambodia -->
-<circle
-cx="650"
-cy="280"
-r="10"
-class="map-point"/>
-
-
-
-</svg>
+<div id="travel-map"></div>
 
 
 </div>
@@ -243,10 +124,7 @@ class="map-point"/>
 
 
 
-
-<!-- ======================
-     Visitor Statistics
-====================== -->
+<!-- 右侧访客统计 -->
 
 
 <div class="visitor-box">
@@ -281,6 +159,7 @@ loading="lazy">
 
 
 
+
 </section>
 
 
@@ -295,10 +174,96 @@ loading="lazy">
 
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
+
+
+
+<script>
+
+
+const visitedCountries = [
+
+"CN",
+"JP",
+"KR",
+"SG",
+"MY",
+"TH",
+"AE",
+"GB",
+"TR",
+"BA",
+"KH"
+
+];
+
+
+
+const map = new jsVectorMap({
+
+selector:"#travel-map",
+
+map:"world",
+
+zoomButtons:false,
+
+
+backgroundColor:"#ffffff",
+
+
+regionStyle:{
+
+initial:{
+
+fill:"#d9e2ec"
+
+}
+
+},
+
+
+regionsSelectable:true,
+
+
+onLoaded:function(){
+
+
+visitedCountries.forEach(function(code){
+
+
+let region =
+document.querySelector(
+'[data-code="'+code+'"]'
+);
+
+
+if(region){
+
+region.classList.add("visited");
+
+}
+
+
+});
+
+
+}
+
+
+});
+
+
+
+</script>
+
+
+
 {% include scripts.html %}
 
 
 </body>
-
 
 </html>
