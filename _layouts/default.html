@@ -6,58 +6,299 @@ layout: compress
 <html lang="en" class="no-js">
 
 <head>
+
   {% include head.html %}
   {% include head/custom.html %}
+
+  <style>
+
+    .visitor-container{
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      gap:50px;
+      flex-wrap:wrap;
+      margin-top:40px;
+    }
+
+
+    .travel-box,
+    .visitor-box{
+      text-align:center;
+    }
+
+
+    .travel-map{
+      width:420px;
+      max-width:90vw;
+    }
+
+
+    .map-point{
+      fill:#ff6b00;
+      stroke:white;
+      stroke-width:2;
+    }
+
+
+  </style>
+
 </head>
+
 
 <body>
 
-  {% include browser-upgrade.html %}
-  {% include masthead.html %}
 
-  <div id="main" role="main">
+{% include browser-upgrade.html %}
 
-    {% include sidebar.html %}
+{% include masthead.html %}
 
-    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
 
-      {% if page.title %}
-      <meta itemprop="headline"
-            content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">
-      {% endif %}
+<div id="main" role="main">
 
-      <div class="page__inner-wrap">
 
-        <section class="page__content" itemprop="text">
+{% include sidebar.html %}
 
-          {{ content }}
 
-          <hr>
 
-            <div style="text-align:center; margin-top:40px;">
-            
-              <h3>🌍 Visitor Statistics</h3>
-            
-              <iframe
-                src="https://revolvermaps2.com/widget/6154bee9-5867-4db3-93e4-3994b61d8fc2"
-                width="360"
-                height="360"
-                style="border:0; border-radius:12px;"
-                loading="lazy">
-              </iframe>
-            
-            </div>
+<article class="page"
+itemscope
+itemtype="http://schema.org/CreativeWork">
 
-        </section>
 
-      </div>
+{% if page.title %}
 
-    </article>
+<meta itemprop="headline"
+content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">
 
-  </div>
+{% endif %}
 
-  {% include scripts.html %}
+
+
+<div class="page__inner-wrap">
+
+
+<section class="page__content"
+itemprop="text">
+
+
+{{ content }}
+
+
+
+<hr>
+
+
+<div class="visitor-container">
+
+
+
+<!-- ======================
+     Travel Map
+====================== -->
+
+
+<div class="travel-box">
+
+
+<h3>🌎 Countries I've Visited</h3>
+
+
+<svg class="travel-map"
+viewBox="0 0 1000 500"
+xmlns="http://www.w3.org/2000/svg">
+
+
+<!-- 简化世界地图背景 -->
+
+<rect
+width="1000"
+height="500"
+fill="#f7f9fc"/>
+
+
+<!-- 大洲轮廓（简化） -->
+
+<path
+d="M100 180
+C150 80 300 80 390 160
+C420 220 350 280 250 260
+C170 260 100 230 100 180Z"
+fill="#d9e2ec"/>
+
+
+<path
+d="M430 120
+C520 60 700 90 760 170
+C800 240 650 280 520 250
+C450 220 410 160 430 120Z"
+fill="#d9e2ec"/>
+
+
+<path
+d="M520 300
+C620 260 760 300 820 390
+C720 450 560 420 500 350Z"
+fill="#d9e2ec"/>
+
+
+
+<!-- visited points -->
+
+
+<!-- China -->
+<circle
+cx="650"
+cy="220"
+r="10"
+class="map-point"/>
+
+
+<!-- Japan -->
+<circle
+cx="720"
+cy="230"
+r="10"
+class="map-point"/>
+
+
+<!-- Korea -->
+<circle
+cx="690"
+cy="210"
+r="10"
+class="map-point"/>
+
+
+<!-- Singapore -->
+<circle
+cx="640"
+cy="300"
+r="10"
+class="map-point"/>
+
+
+<!-- Malaysia -->
+<circle
+cx="620"
+cy="290"
+r="10"
+class="map-point"/>
+
+
+<!-- Thailand -->
+<circle
+cx="610"
+cy="260"
+r="10"
+class="map-point"/>
+
+
+<!-- UAE -->
+<circle
+cx="520"
+cy="270"
+r="10"
+class="map-point"/>
+
+
+<!-- UK -->
+<circle
+cx="430"
+cy="160"
+r="10"
+class="map-point"/>
+
+
+<!-- Turkey -->
+<circle
+cx="500"
+cy="230"
+r="10"
+class="map-point"/>
+
+
+<!-- Bosnia -->
+<circle
+cx="470"
+cy="210"
+r="10"
+class="map-point"/>
+
+
+<!-- Cambodia -->
+<circle
+cx="650"
+cy="280"
+r="10"
+class="map-point"/>
+
+
+
+</svg>
+
+
+</div>
+
+
+
+
+
+<!-- ======================
+     Visitor Statistics
+====================== -->
+
+
+<div class="visitor-box">
+
+
+<h3>🌍 Visitor Statistics</h3>
+
+
+<iframe
+
+src="https://revolvermaps2.com/widget/f3b3338d-2d17-420e-8a68-b4430d98fa61"
+
+width="360"
+
+height="360"
+
+style="
+border:0;
+border-radius:12px;
+"
+
+loading="lazy">
+
+</iframe>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+</div>
+
+
+</article>
+
+
+</div>
+
+
+
+
+{% include scripts.html %}
+
 
 </body>
+
 
 </html>
