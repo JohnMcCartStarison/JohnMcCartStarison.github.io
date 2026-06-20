@@ -1,1 +1,75 @@
---- layout: compress --- <!doctype html> <html lang="en" class="no-js"> <head> {% include head.html %} {% include head/custom.html %} <style> /* 强制缩小 Globe */ .mmvst_outer{ width:300px !important; height:300px !important; margin:auto !important; } .mmvst_inner{ width:300px !important; height:300px !important; } .mmvst_globe{ width:300px !important; height:300px !important; } </style> </head> <body> {% include browser-upgrade.html %} {% include masthead.html %} <div id="main" role="main"> {% include sidebar.html %} <article class="page" itemscope itemtype="http://schema.org/CreativeWork"> {% if page.title %} <meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}"> {% endif %} <div class="page__inner-wrap"> <section class="page__content" itemprop="text"> {{ content }} <hr> <div style="text-align:center; margin-top:40px;"> <h3>🌍 Visitor Statistics</h3> <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=6KroIV-3pry1d7NigozY0DVLmYX7XyYFp5T0FpAvGLs"> </script> </div> </section> </div> </article> </div> {% include scripts.html %} </body> </html>
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+
+    <style>
+      /* 控制 MapMyVisitors 地图大小 */
+      svg.dots_svg{
+        width: 500px !important;
+        height: auto !important;
+        max-width: 100% !important;
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* 防止横向滚动 */
+      .page__content{
+        overflow-x: hidden;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <div id="main" role="main">
+      {% include sidebar.html %}
+
+      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+
+        {% if page.title %}
+        <meta itemprop="headline"
+              content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">
+        {% endif %}
+
+        <div class="page__inner-wrap">
+
+          <section class="page__content" itemprop="text">
+
+            {{ content }}
+
+            <hr>
+
+            <div style="text-align:center; margin-top:40px;">
+
+              <h3>🌍 Visitor Statistics</h3>
+
+              <script
+                type="text/javascript"
+                id="mmvst_globe"
+                src="//mapmyvisitors.com/globe.js?d=6KroIV-3pry1d7NigozY0DVLmYX7XyYFp5T0FpAvGLs">
+              </script>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>
