@@ -9,21 +9,16 @@ layout: compress
     {% include head/custom.html %}
 
     <style>
-      /* MapMyVisitors 地图 */
+      /* 控制 MapMyVisitors 地图大小 */
       svg.dots_svg{
-        width: 350px !important;   /* 原来500，改为350 */
+        width: 300px !important;
         height: auto !important;
-    
-        display: block !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
+        max-width: 100% !important;
+        display: block;
+        margin: 0 auto;
       }
-    
-      /* 强制居中容器 */
-      .mmvst_inner{
-        text-align: center !important;
-      }
-    
+
+      /* 防止横向滚动 */
       .page__content{
         overflow-x: hidden;
       }
