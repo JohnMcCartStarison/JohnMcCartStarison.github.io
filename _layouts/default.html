@@ -9,27 +9,18 @@ layout: compress
     {% include head/custom.html %}
 
     <style>
-      /* MapMyVisitors Widget */
-      .mmvst_outer{
-        width:300px !important;
-        height:300px !important;
-        margin:auto !important;
-      }
-
-      .mmvst_inner{
-        width:300px !important;
-        height:300px !important;
-      }
-
-      .mmvst_globe{
-        width:300px !important;
-        height:300px !important;
-      }
-
-      /* 缩小 SVG 访客地图 */
+      /* 控制 MapMyVisitors 地图大小 */
       svg.dots_svg{
-        width:200px !important;
-        height:auto !important;
+        width: 500px !important;
+        height: auto !important;
+        max-width: 100% !important;
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* 防止横向滚动 */
+      .page__content{
+        overflow-x: hidden;
       }
     </style>
 
