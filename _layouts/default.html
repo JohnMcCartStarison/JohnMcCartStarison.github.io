@@ -5,391 +5,61 @@ layout: compress
 <!doctype html>
 <html lang="en" class="no-js">
 
-
 <head>
-
-{% include head.html %}
-{% include head/custom.html %}
-
-
-<!-- Leaflet -->
-<link
-rel="stylesheet"
-href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-/>
-
-
-<style>
-
-
-.visitor-container{
-
-display:flex;
-justify-content:center;
-align-items:flex-start;
-gap:50px;
-flex-wrap:wrap;
-margin-top:40px;
-
-}
-
-
-.travel-box,
-.visitor-box{
-
-text-align:center;
-
-}
-
-
-#travel-map{
-
-width:500px;
-height:320px;
-max-width:90vw;
-
-border-radius:12px;
-
-overflow:hidden;
-
-}
-
-
-</style>
-
-
+  {% include head.html %}
+  {% include head/custom.html %}
 </head>
-
-
 
 <body>
 
+  {% include browser-upgrade.html %}
+  {% include masthead.html %}
 
-{% include browser-upgrade.html %}
+  <div id="main" role="main">
 
-{% include masthead.html %}
+    {% include sidebar.html %}
 
+    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
 
+      {% if page.title %}
+      <meta itemprop="headline"
+            content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">
+      {% endif %}
 
-<div id="main" role="main">
+      <div class="page__inner-wrap">
 
+        <section class="page__content" itemprop="text">
 
-{% include sidebar.html %}
+          {{ content }}
 
+          <hr>
 
+            <div style="text-align:center; margin-top:40px;">
+            
+              <h3>🌍 Visitor Statistics</h3>
+            
+              <iframe
+                src="https://revolvermaps2.com/widget/6154bee9-5867-4db3-93e4-3994b61d8fc2"
+                width="360"
+                height="360"
+                style="border:0; border-radius:12px;"
+                loading="lazy">
+              </iframe>
+            
+            </div>
 
+        </section>
 
-<article class="page"
-itemscope
-itemtype="http://schema.org/CreativeWork">
+      </div>
 
+    </article>
 
+  </div>
 
-{% if page.title %}
-
-<meta itemprop="headline"
-content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">
-
-{% endif %}
-
-
-
-
-<div class="page__inner-wrap">
-
-
-<section class="page__content"
-itemprop="text">
-
-
-
-{{ content }}
-
-
-
-<hr>
-
-
-
-<div class="visitor-container">
-
-
-
-<!-- ======================
-     Travel Map
-====================== -->
-
-
-<div class="travel-box">
-
-
-<h3>🌎 Countries I've Visited</h3>
-
-
-<div id="travel-map"></div>
-
-
-</div>
-
-
-
-
-
-
-<!-- ======================
-     Visitor Statistics
-====================== -->
-
-
-<div class="visitor-box">
-
-
-<h3>🌍 Visitor Statistics</h3>
-
-
-
-<iframe
-
-src="https://revolvermaps2.com/widget/6154bee9-5867-4db3-93e4-3994b61d8fc2"
-
-width="360"
-
-height="360"
-
-style="
-border:0;
-border-radius:12px;
-"
-
-loading="lazy">
-
-</iframe>
-
-
-</div>
-
-
-
-</div>
-
-
-
-</section>
-
-
-</div>
-
-
-
-</article>
-
-
-
-</div>
-
-
-
-
-
-<!-- Leaflet JS -->
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-
-
-
-<script>
-
-
-// =====================
-// 已访问国家
-// =====================
-
-
-const visitedCountries = [
-
-
-"China",
-
-"Japan",
-
-"South Korea",
-
-"Singapore",
-
-"Malaysia",
-
-"Thailand",
-
-"United Arab Emirates",
-
-"United Kingdom",
-
-"Turkey",
-
-"Bosnia and Herzegovina",
-
-"Cambodia"
-
-
-];
-
-
-
-
-
-// =====================
-// 创建地图
-// =====================
-
-
-const map = L.map(
-"travel-map",
-{
-
-zoomControl:false,
-
-attributionControl:false
-
-}
-
-)
-.setView(
-[25,10],
-2
-);
-
-
-
-
-
-
-// OpenStreetMap 底图
-
-L.tileLayer(
-
-"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-
-{
-
-maxZoom:5
-
-}
-
-).addTo(map);
-
-
-
-
-
-
-
-// =====================
-// 加载世界国家数据
-// =====================
-
-
-fetch(
-
-"https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json"
-
-)
-
-.then(response=>response.json())
-
-
-.then(world=>{
-
-
-
-L.geoJSON(
-
-world,
-
-{
-
-
-style:function(feature){
-
-
-let country =
-feature.properties.name;
-
-
-
-return {
-
-
-fillColor:
-
-visitedCountries.includes(country)
-
-?
-
-"#ff8c00"
-
-:
-
-"#dce6f1",
-
-
-
-weight:1,
-
-color:"#ffffff",
-
-
-fillOpacity:0.85
-
-
-};
-
-
-},
-
-
-
-
-
-
-onEachFeature:function(
-feature,
-layer
-){
-
-
-layer.bindTooltip(
-
-feature.properties.name
-
-);
-
-
-}
-
-
-
-}
-
-).addTo(map);
-
-
-
-});
-
-
-
-
-
-</script>
-
-
-
-
-{% include scripts.html %}
-
-
+  {% include scripts.html %}
 
 </body>
 
 </html>
+
+
