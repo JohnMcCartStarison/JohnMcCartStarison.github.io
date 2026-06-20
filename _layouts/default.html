@@ -5,16 +5,22 @@ layout: compress
 <!doctype html>
 <html lang="en" class="no-js">
 
+
 <head>
 
 {% include head.html %}
 {% include head/custom.html %}
 
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/jsvectormap@1.3.3/dist/css/jsvectormap.min.css">
+
+<!-- Leaflet -->
+<link
+rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
 
 
 <style>
+
 
 .visitor-container{
 
@@ -39,20 +45,12 @@ text-align:center;
 #travel-map{
 
 width:500px;
-height:300px;
-}
+height:320px;
+max-width:90vw;
 
+border-radius:12px;
 
-.jvm-region{
-
-fill:#d9e2ec;
-
-}
-
-
-.jvm-region.visited{
-
-fill:#ff6b00 !important;
+overflow:hidden;
 
 }
 
@@ -63,11 +61,14 @@ fill:#ff6b00 !important;
 </head>
 
 
+
 <body>
 
 
 {% include browser-upgrade.html %}
+
 {% include masthead.html %}
+
 
 
 <div id="main" role="main">
@@ -76,9 +77,12 @@ fill:#ff6b00 !important;
 {% include sidebar.html %}
 
 
+
+
 <article class="page"
 itemscope
 itemtype="http://schema.org/CreativeWork">
+
 
 
 {% if page.title %}
@@ -89,11 +93,14 @@ content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once
 {% endif %}
 
 
+
+
 <div class="page__inner-wrap">
 
 
 <section class="page__content"
 itemprop="text">
+
 
 
 {{ content }}
@@ -108,7 +115,10 @@ itemprop="text">
 
 
 
-<!-- 左侧旅行地图 -->
+<!-- ======================
+     Travel Map
+====================== -->
+
 
 <div class="travel-box">
 
@@ -124,13 +134,18 @@ itemprop="text">
 
 
 
-<!-- 右侧访客统计 -->
+
+
+<!-- ======================
+     Visitor Statistics
+====================== -->
 
 
 <div class="visitor-box">
 
 
 <h3>🌍 Visitor Statistics</h3>
+
 
 
 <iframe
@@ -159,14 +174,15 @@ loading="lazy">
 
 
 
-
 </section>
 
 
 </div>
 
 
+
 </article>
+
 
 
 </div>
@@ -175,88 +191,193 @@ loading="lazy">
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+<!-- Leaflet JS -->
 
-<script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 
 
 
 <script>
 
 
+// =====================
+// 已访问国家
+// =====================
+
+
 const visitedCountries = [
 
-"CN",
-"JP",
-"KR",
-"SG",
-"MY",
-"TH",
-"AE",
-"GB",
-"TR",
-"BA",
-"KH",
-"TW",
-"HK",
-"MO"
+
+"China",
+
+"Japan",
+
+"South Korea",
+
+"Singapore",
+
+"Malaysia",
+
+"Thailand",
+
+"United Arab Emirates",
+
+"United Kingdom",
+
+"Turkey",
+
+"Bosnia and Herzegovina",
+
+"Cambodia"
+
 
 ];
 
 
 
-const map = new jsVectorMap({
-
-selector:"#travel-map",
-
-map:"world",
-
-zoomButtons:false,
 
 
-backgroundColor:"#ffffff",
+// =====================
+// 创建地图
+// =====================
 
 
-regionStyle:{
+const map = L.map(
+"travel-map",
+{
 
-initial:{
+zoomControl:false,
 
-fill:"#d9e2ec"
+attributionControl:false
 
 }
+
+)
+.setView(
+[25,10],
+2
+);
+
+
+
+
+
+
+// OpenStreetMap 底图
+
+L.tileLayer(
+
+"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+
+{
+
+maxZoom:5
+
+}
+
+).addTo(map);
+
+
+
+
+
+
+
+// =====================
+// 加载世界国家数据
+// =====================
+
+
+fetch(
+
+"https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json"
+
+)
+
+.then(response=>response.json())
+
+
+.then(world=>{
+
+
+
+L.geoJSON(
+
+world,
+
+{
+
+
+style:function(feature){
+
+
+let country =
+feature.properties.name;
+
+
+
+return {
+
+
+fillColor:
+
+visitedCountries.includes(country)
+
+?
+
+"#ff8c00"
+
+:
+
+"#dce6f1",
+
+
+
+weight:1,
+
+color:"#ffffff",
+
+
+fillOpacity:0.85
+
+
+};
+
 
 },
 
 
-regionsSelectable:true,
 
 
-onLoaded:function(){
 
 
-visitedCountries.forEach(function(code){
+onEachFeature:function(
+feature,
+layer
+){
 
 
-let region =
-document.querySelector(
-'[data-code="'+code+'"]'
+layer.bindTooltip(
+
+feature.properties.name
+
 );
 
 
-if(region){
+}
 
-region.classList.add("visited");
+
 
 }
+
+).addTo(map);
+
 
 
 });
 
 
-}
-
-
-});
 
 
 
@@ -264,7 +385,9 @@ region.classList.add("visited");
 
 
 
+
 {% include scripts.html %}
+
 
 
 </body>
