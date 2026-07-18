@@ -34,19 +34,19 @@ layout: compress
 
           <hr>
 
-            <div style="text-align:center; margin-top:40px;">
-            
-              <h3>🌍 Visitor Statistics</h3>
-            
-              <iframe
-                src="https://revolvermaps2.com/widget/6154bee9-5867-4db3-93e4-3994b61d8fc2"
-                width="360"
-                height="360"
-                style="border:0; border-radius:12px;"
-                loading="lazy">
-              </iframe>
-            
-            </div>
+          <div class="revolvermaps-container">
+
+            <h3>🌍 Visitor Statistics</h3>
+
+            <!-- RevolverMaps 3D Visitor Globe -->
+            <script 
+              type="text/javascript"
+              src="//rf.revolvermaps.com/0/0/8.js?i=YOUR_MAP_ID&m=0&c=ff0000&cr1=ffffff&f=arial&l=33"
+              async="async">
+            </script>
+
+          </div>
+
 
         </section>
 
@@ -56,7 +56,23 @@ layout: compress
 
   </div>
 
+
   {% include scripts.html %}
+
+
+<style>
+
+.revolvermaps-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.revolvermaps-container h3 {
+    margin-bottom: 25px;
+}
+
+</style>
+
 
 </body>
 
