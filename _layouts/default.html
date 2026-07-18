@@ -34,18 +34,42 @@ layout: compress
 
           <hr>
 
-          <div class="revolvermaps-container">
 
-            <h3>🌍 Visitor Statistics</h3>
+          <!-- Website Visitor Statistics -->
 
-            <!-- RevolverMaps 3D Visitor Globe -->
-            <script 
-              type="text/javascript"
-              src="//rf.revolvermaps.com/0/0/8.js?i=YOUR_MAP_ID&m=0&c=ff0000&cr1=ffffff&f=arial&l=33"
-              async="async">
-            </script>
+          <div class="visitor-statistics">
+
+            <h3>🌍 Website Statistics</h3>
+
+
+            <div class="statistics-box">
+
+              <p>
+                👤 Visitors:
+                <span id="busuanzi_value_site_uv">
+                  --
+                </span>
+              </p>
+
+
+              <p>
+                👀 Page Views:
+                <span id="busuanzi_value_site_pv">
+                  --
+                </span>
+              </p>
+
+
+            </div>
+
 
           </div>
+
+
+          <!-- Busuanzi Counter -->
+          <script async 
+          src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+          </script>
 
 
         </section>
@@ -60,16 +84,50 @@ layout: compress
   {% include scripts.html %}
 
 
+
 <style>
 
-.revolvermaps-container {
+.visitor-statistics {
+
     text-align: center;
+
     margin-top: 40px;
+
+    margin-bottom: 30px;
+
 }
 
-.revolvermaps-container h3 {
+
+.visitor-statistics h3 {
+
     margin-bottom: 25px;
+
 }
+
+
+.statistics-box {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border-radius: 12px;
+
+    background: #f7f7f7;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+.statistics-box p {
+
+    margin: 5px 0;
+
+}
+
 
 </style>
 
@@ -77,5 +135,3 @@ layout: compress
 </body>
 
 </html>
-
-
