@@ -55,7 +55,6 @@ PEM fuel cells[J]. **Chinese Journal of Power Sources**,2025,49(03):596-607. [Vi
 - Fan Zhang, Xuhui Song, **Chengze Ji**, Yuze Zheng, Jiajing Li, Kailong Ji, Xiaolu Zhang, Kaixiang Gong. An active neutral-point voltage balancing method for suppressing low-frequency AC components in three-level inverters. CN Patent CN118783797A, 2024.
 
 
-<span id="-research"></span>
 # 🔬 Research Experience and Projects
 
 <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
