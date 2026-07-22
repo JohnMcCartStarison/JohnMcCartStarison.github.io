@@ -49,7 +49,7 @@ author_profile: true
 - 张帆，宋旭晖，**冀承泽**，郑宇泽，李家劲，纪凯龙，张晓璐，龚凯翔. 一种三电平逆变器中点电位有源平衡方法及抑制低频交流分量. 中国专利 CN118783797A，2024年.
 
 
-<span class="anchor" id="-honors-and-awards"></span>
+<span class="anchor" id="-research-experience-and-projects"></span>
 # 🔬 科研&项目经历
 
 <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
@@ -68,7 +68,7 @@ author_profile: true
 - 探究了反应充分性与可逆水煤气反应的选择性对产气水平、产气比例的影响
 - 参与了电堆测试平台的搭建与运维
 
-<span class="anchor" id="-research-experience-and-projects"></span>
+<span class="anchor" id="-honors-and-awards"></span>
 # 🎖 荣誉与获奖
 - *2026.07* **西安交通大学优秀硕士学位论文**
 - *2026.06* 西安交通大学优秀毕业生干部
