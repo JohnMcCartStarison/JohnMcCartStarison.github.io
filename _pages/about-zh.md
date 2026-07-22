@@ -16,7 +16,7 @@ author_profile: true
 
 ## 关于我
 
-我的研究方向包括：
+我的研究兴趣包括：
 1. 电-氢协同技术
 2. 虚拟电厂与综合能源系统优化
 3. 人工智能在电力系统中的应用
@@ -24,14 +24,14 @@ author_profile: true
 
 <span class="anchor" id="-news"></span>
 # 🔥 新闻动态
-- *2026.06*: &nbsp;🎉🎉 祝贺雷富教授的论文被 **Nature Communications**（IF = 18.1）接收。
+- *2026.06*: &nbsp;🎉🎉 祝贺付磊教授的论文被 **Nature Communications**（IF = 18.1）接收。
 - *2025.11*: &nbsp;🎉🎉 本人论文被 **International Journal of Hydrogen Energy**（IF = 8.3）接收。
 
 
 <span class="anchor" id="-publications"></span>
 # 📝 论文&专利
 ## 期刊论文
-- **姬成泽**，李茹涵，邓柯，高远，杨喆，杜浩然，王俊博，周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>，吴锴<sup>[📧](mailto:wukai@mail.xjtu.edu.cn)</sup>。3D multiphysics SOEC modeling and parametric analysis for syngas production by co-electrolysis of H<sub>2</sub>O and CO<sub>2</sub>[J]. **International Journal of Hydrogen Energy**, 2026, 199: 152497. [查看论文 →](https://doi.org/10.1016/j.ijhydene.2025.152497)
+- **冀承泽**，李茹涵，邓柯，高远，杨喆，杜浩然，王俊博，周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>，吴锴<sup>[📧](mailto:wukai@mail.xjtu.edu.cn)</sup>。3D multiphysics SOEC modeling and parametric analysis for syngas production by co-electrolysis of H<sub>2</sub>O and CO<sub>2</sub>[J]. **International Journal of Hydrogen Energy**, 2026, 199: 152497. [查看论文 →](https://doi.org/10.1016/j.ijhydene.2025.152497)
 - **姬成泽**，周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>，宋旭辉，李茹涵，李存鑫，高远，邓珂，陈泽楷，吴硕，沈炜，吴锴<sup>[📧](mailto:wukai@mail.xjtu.edu.cn)</sup>。Dynamic modeling and optimal control of switching modes in reversible solid oxide cells for integrated electric-hydrogen energy system[J]. **Applied Energy**, 2025, 397: 126270. [查看论文 →](https://doi.org/10.1016/j.apenergy.2025.126270)
 - **姬成泽**，宗铮，戈阳阳，张晓彤，吴锴，周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>。可逆固体氧化物电池电-氢双向瞬态转换特性及电流超调机制[J]. **高电压技术**, 2025, 51(05): 2200-2209. [查看论文 →](https://doi.org/10.13336/j.1003-6520.hve.20240432)
 - 周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>，**姬成泽**，李茹涵，宋旭辉，吴锴，成永红。电解水制氢技术发展现状及其在新型电力系统中的应用进展[J]. **高电压技术**,2025,51(05):2096-2113. [查看论文 →](https://doi.org/10.13336/j.1003-6520.hve.20242050)
