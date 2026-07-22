@@ -7,13 +7,16 @@
   function translatePage() {
     if (!isZh) return;
 
-    // --- Top nav ---
+    // --- Browser tab title ---
+    document.title = '冀承泽 - 首页';
+
+    // --- Top nav: "Homepage" → "首页" ---
     var homeLink = document.querySelector('.masthead__menu-home-item a, .masthead__menu-item--lg a');
     if (homeLink && homeLink.textContent.trim() === 'Homepage') {
       homeLink.textContent = '首页';
     }
 
-    // --- Sidebar Name ---
+    // --- Sidebar name ---
     var nameEl = document.querySelector('.author__name');
     if (nameEl && nameEl.textContent.trim() === 'Chengze Ji') {
       nameEl.textContent = '冀承泽';
@@ -35,38 +38,33 @@
       }
     });
 
-    // --- Helper: replace text node content inside an element ---
-    function replaceTextNode(parent, searchText, replaceText) {
-      parent.childNodes.forEach(function(node) {
-        if (node.nodeType === 3) { // text node
-          var s = node.textContent.trim();
-          if (s === searchText) {
-            node.textContent = replaceText;
-          }
+    // --- Helper: replace text node content ---
+    function replaceTextNode(parent, search, replace) {
+      parent.childNodes.forEach(function(n) {
+        if (n.nodeType === 3 && n.textContent.trim() === search) {
+          n.textContent = replace;
         }
       });
     }
 
-    // --- Email: "Email" → "邮件联系" ---
+    // --- Email ---
     document.querySelectorAll('.author__urls-wrapper a[href^="mailto:"]').forEach(function(a) {
       replaceTextNode(a, 'Email', '邮件联系');
     });
 
-    // --- Google Scholar: "Google Scholar" → "谷歌学术主页" ---
+    // --- Google Scholar ---
     document.querySelectorAll('.author__urls-wrapper a[href*="scholar.google"]').forEach(function(a) {
       replaceTextNode(a, 'Google Scholar', '谷歌学术主页');
     });
 
-    // --- Scopus: "Scopus" → "Scopus个人主页" ---
+    // --- Scopus ---
     document.querySelectorAll('.author__urls-wrapper a[href*="scopus"]').forEach(function(a) {
       replaceTextNode(a, 'Scopus', 'Scopus个人主页');
     });
 
     // --- Follow button ---
-    var follow = document.querySelector('.author__urls-wrapper .btn--inverse');
-    if (follow && follow.textContent.trim() === 'Follow') {
-      follow.textContent = '关注';
-    }
+    var f = document.querySelector('.author__urls-wrapper .btn--inverse');
+    if (f && f.textContent.trim() === 'Follow') f.textContent = '关注';
 
     // --- Toggle button ---
     var btn = document.getElementById('lang-toggle');
@@ -87,3 +85,19 @@
   };
 })();
 </script>
+
+<!-- Sidebar text alignment fix for Chinese page -->
+<style>
+/* Fix Scopus img to match fa-fw icon width */
+.author__urls-wrapper li img[style*="width: 20px"] {
+  width: 1.25em !important;
+  height: 1.25em !important;
+  object-fit: contain;
+  vertical-align: middle;
+}
+/* Keep link text and plain text aligned */
+.author__urls.social-icons li > a {
+  display: inline;
+  padding-left: 0;
+}
+</style>
