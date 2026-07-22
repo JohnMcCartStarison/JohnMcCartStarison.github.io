@@ -34,8 +34,8 @@ author_profile: true
 - **Chengze Ji**, Ruhuan Li, Ke Deng, Yuan Gao, Zhe Yang, Haoran Du, Junbo Wang, Jun Zhou<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>, Kai Wu<sup>[📧](mailto:wukai@mail.xjtu.edu.cn)</sup>. 3D multiphysics SOEC modeling and parametric analysis for syngas production by co-electrolysis of H<sub>2</sub>O and CO<sub>2</sub>[J]. **International Journal of Hydrogen Energy**, 2026, 199: 152497. [查看论文 →](https://doi.org/10.1016/j.ijhydene.2025.152497)
 - **Chengze Ji**, Jun Zhou<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>, Xuhui Song, Ruhuan Li, Cunxin Li, Yuan Gao, Ke Deng, Zekai Chen, Shuo Wu, Wei Shen, Kai Wu<sup>[📧](mailto:wukai@mail.xjtu.edu.cn)</sup>. Dynamic modeling and optimal control of switching modes in reversible solid oxide cells for integrated electric-hydrogen energy system[J]. **Applied Energy**, 2025, 397: 126270. [查看论文 →](https://doi.org/10.1016/j.apenergy.2025.126270)
 - **冀承泽**，宗正，戈阳阳，张潇桐，吴锴，周峻<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>。可逆固体氧化物电池电-氢双向瞬态转换特性及电流超调机制[J]. **高电压技术**, 2025, 51(05): 2200-2209. [查看论文 →](https://doi.org/10.13336/j.1003-6520.hve.20240432)
-- 周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>，**姬成泽**，李茹涵，宋旭辉，吴锴，成永红。电解水制氢技术发展现状及其在新型电力系统中的应用进展[J]. **高电压技术**,2025,51(05):2096-2113. [查看论文 →](https://doi.org/10.13336/j.1003-6520.hve.20242050)
-- **冀承泽**，贾立新<sup>[📧](mailto:lxjia@xjtu.edu.cn)</sup>，李景辉。基于改进YOLOv5s的两种输电杆塔缺陷检测研究[J]. **计算机技术与发展**,2024,34(02):180-185. [查看论文 →](https://doi.org/10.3969/j.issn.1673-629X.2024.02.026)
+- 周峻<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>，**冀承泽**，李儒欢，宋旭晖，吴锴，成永红.电解水制氢技术发展现状及其在新型电力系统中的应用进展[J]. **高电压技术**,2025,51(05):2096-2113. [查看论文 →](https://doi.org/10.13336/j.1003-6520.hve.20242050)
+- **冀承泽**，贾立新<sup>[📧](mailto:lxjia@xjtu.edu.cn)</sup>，李荆晖. 基于改进YOLOv5s的两种输电杆塔缺陷检测研究[J]. **计算机技术与发展**,2024,34(02):180-185. [查看论文 →](https://doi.org/10.3969/j.issn.1673-629X.2024.02.026)
 - 周峻，孙跃跃，李儒欢，**冀承泽**，付磊，吴锴，成永红. 面向电氢耦合能源系统的可逆固体氧化物电池研究进展[J]. **西安交通大学学报**,2026,60(04):72-83. [查看论文 →](https://kns.cnki.net/kcms2/article/abstract?v=Omth-A4cfW_SGoNKshSZAcSlLx6r7c21SudN8xm5sk3BG_dnV8NDgmFo6yg10OMHPj-SBgm46NmqIashIuJqyxi0Wc4hht_U4wy5pt9dCTOpj2KZ6tOvsfNnJgARTG1_58fhd004l3Lrlv1edVDJQQ6jeoEsVesjoDvw6NPueZJAI3HwJdWuTw==&uniplatform=NZKPT&language=CHS)
 - 邱子桐，张潇桐，戈阳阳，李儒欢，李浩南，**冀承泽**，吴锴，周峻. 可逆PEM燃料电池建模及切换过程系统效率分析研究[J]. **电源技术**,2025,49(03):596-607. [查看论文 →](https://doi.org/10.3969/j.issn.1002-087X.2025.03.018)
 - 王俊波，邓可，赵鸿飞，唐琪，张殷，**冀承泽**，周峻<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>. 基于多尺度模拟的固体氧化物电解池多孔电极设计及电场仿真[J]. **陶瓷学报**,2026,47(01):149-158. [查看论文 →](https://doi.org/10.13957/j.cnki.tcxb.2026.01.016)
@@ -53,30 +53,32 @@ author_profile: true
 <span id="-research"></span>
 # 🔬 科研&项目经历
 
-**1. 可逆固体氧化物电池的电流超调形成机制及其抑制措施研究（陕西省重点研发计划）** &nbsp; **(学生负责人) 2023.09 – 2024.12**
+**1. 可逆固体氧化物电池的电流超调形成机制及其抑制措施研究（陕西省重点研发计划）** &nbsp; **2023.09 – 2024.12 学生负责人**
 - 基于COMSOL建立三维RSOC多物理场模型，揭示动态运行过程中的超调机理
 - 结合Simulink设计双向适应性模糊控制策略，实现模式切换平滑调控
 - 提出通气优化方法抑制动态超调，提升RSOC运行稳定性
 
-**2. 面向电网用长时储能的共电解关键技术研究（电网公司科技项目）** &nbsp; **(子课题学生负责人) 2025.03 – 2026.09**
+**2. 面向电网用长时储能的共电解关键技术研究（电网公司科技项目）** &nbsp; **2025.03 – 2026.09  子课题学生负责人**
 - 基于Comsol建立共电解SOEC电堆模型，从结构和运行参数探究影响共电解产气能力的关键因素
 - 探究反应充分性与可逆水煤气反应的选择性对产气水平、产气比例的影响
 - 参与搭建电堆测试平台
 
 # 🎖 荣誉与获奖
-- *2026.04* 陈济丹，刘梓宇，刘启昌，刘垚楠，顾振钧：二等思源奖学金。
-- *2025.11* 国家奖学金。
-- *2025.09* 第十二届中国研究生能源装备创新设计大赛 全国二等奖。
-- *2025.09* 中国国际大学生创新大赛（陕西赛区）金奖。
-- *2025.08* 第二十届中国研究生电子设计竞赛（西北赛区）一等奖。
-- *2025.01* "远东"一等社会奖学金。
-- *2024.11* 西安交通大学研究生特等奖学金。
-- *2023.10* 西安交通大学研究生特等奖学金。
-- *2023.01* 第十三届亚太地区大学生数学建模竞赛（APMCM）二等奖。
-- *2022.10* 西安交通大学本科三等奖学金。
-- *2022.08* 第十四届"中国电机工程学会杯"全国大学生电工数学建模竞赛 全国二等奖。
-- *2021.10* 西安交通大学本科二等奖学金。
-- *2020.10* 西安交通大学本科二等奖学金。
+- *2026.06* 西安交通大学优秀毕业生干部
+- *2026.04* “一陈三刘一顾”二等奖学金
+- *2025.11* 国家奖学金
+- *2025.09* 第十二届中国研究生能源装备创新设计大赛 全国二等奖
+- *2025.09* 中国国际大学生创新大赛（陕西赛区）金奖
+- *2025.08* 第二十届中国研究生电子设计竞赛（西北赛区）一等奖
+- *2025.01* "远东"一等社会奖学金
+- *2024.11* 西安交通大学研究生特等奖学金
+- *2023.10* 西安交通大学研究生特等奖学金
+- *2023.06* 西安交通大学优秀毕业生干部
+- *2023.01* 第十三届亚太地区大学生数学建模竞赛（APMCM）二等奖
+- *2022.10* 西安交通大学本科三等奖学金
+- *2022.08* 第十四届"中国电机工程学会杯"全国大学生电工数学建模竞赛 全国二等奖
+- *2021.10* 西安交通大学本科二等奖学金
+- *2020.10* 西安交通大学本科二等奖学金
 
 
 <span class="anchor" id="-educations"></span>
