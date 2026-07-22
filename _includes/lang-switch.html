@@ -1,15 +1,11 @@
 <script>
 (function() {
-  // --- Detect current page ---
   var isZh = window.location.pathname.startsWith('/zh/') || 
              window.location.pathname === '/zh';
-  
-  // Update html lang
   document.documentElement.lang = isZh ? 'zh' : 'en';
 
-  // --- Apply all translations ---
   function translatePage() {
-    if (!isZh) return; // Only translate on Chinese page
+    if (!isZh) return;
 
     // 1. Top nav: "Homepage" → "首页"
     var homeLink = document.querySelector('.masthead__menu-home-item a');
@@ -17,41 +13,47 @@
       homeLink.textContent = '首页';
     }
 
-    // 2. Sidebar bio: "BEng, MEng" → "硕士（电气工程）"
-    var bio = document.querySelector('.author__bio');
-    if (bio && bio.textContent.trim() === 'BEng, MEng') {
-      bio.textContent = '西安交通大学 · 电气工程硕士';
+    // 2. Name: "Chengze Ji" → "冀承泽"
+    var nameEl = document.querySelector('.author__name');
+    if (nameEl && nameEl.textContent.trim() === 'Chengze Ji') {
+      nameEl.textContent = '冀承泽';
     }
 
-    // 3. Sidebar: Email label
-    document.querySelectorAll('.author__urls-wrapper a[href^="mailto:"]').forEach(function(a) {
-      if (a.textContent.trim() === 'Email') {
-        a.textContent = '邮箱';
+    // 3. Bio: "BEng, MEng" → keep unchanged (user said don't change)
+
+    // 4. Site description: "School of Electrical Engineering, Xi'an Jiaotong University"
+    document.querySelectorAll('.author__urls-wrapper li div').forEach(function(div) {
+      var text = div.textContent.trim();
+      if (text === "School of Electrical Engineering, Xi'an Jiaotong University" ||
+          text === "School of Electrical Engineering, Xi’an Jiaotong University") {
+        div.textContent = '西安交通大学电气工程学院';
       }
     });
 
-    // 4. Sidebar: "Google Scholar" → "谷歌学术"
-    document.querySelectorAll('.author__urls-wrapper a[href*="scholar.google"]').forEach(function(a) {
-      if (a.textContent.trim() === 'Google Scholar') {
-        a.textContent = '谷歌学术';
-      }
-    });
-
-    // 5. Sidebar: "Xi'an, China" → "西安，中国"
-    document.querySelectorAll('.author__urls-wrapper li, .page__content li, .sidebar li').forEach(function(li) {
-      var text = li.textContent.trim();
-      if (text.includes("Xi'an") || text.includes("Xi’an")) {
+    // 5. Location: "Xi'an, China" → "西安，中国" (preserve icon via innerHTML)
+    document.querySelectorAll('.author__urls-wrapper li').forEach(function(li) {
+      if (li.textContent.includes("Xi'an") || li.textContent.includes("Xi’an")) {
         li.innerHTML = li.innerHTML.replace(/Xi'?an(,\s*(China|中国))?/gi, '西安，中国');
       }
     });
 
-    // 6. "Follow" button → "关注"
+    // 6. Email link: preserve <i> icon, only replace text node
+    document.querySelectorAll('.author__urls-wrapper a[href^="mailto:"]').forEach(function(a) {
+      a.innerHTML = a.innerHTML.replace(/>\s*Email\s*</, '>邮箱<');
+    });
+
+    // 7. Google Scholar: preserve <i> icon
+    document.querySelectorAll('.author__urls-wrapper a[href*="scholar.google"]').forEach(function(a) {
+      a.innerHTML = a.innerHTML.replace(/>\s*Google Scholar\s*</, '>谷歌学术<');
+    });
+
+    // 8. "Follow" button
     var follow = document.querySelector('.author__urls-wrapper .btn--inverse');
     if (follow && follow.textContent.trim() === 'Follow') {
       follow.textContent = '关注';
     }
 
-    // 7. Update toggle button text
+    // 9. Update toggle button
     var btn = document.getElementById('lang-toggle');
     if (btn) {
       btn.innerHTML = '🌐 English';
@@ -59,17 +61,14 @@
     }
   }
 
-  // Run after page is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', translatePage);
   } else {
     translatePage();
   }
 
-  // --- Toggle function for button ---
   window.toggleLanguage = function() {
-    var currentLang = document.documentElement.lang || 'en';
-    window.location.href = (currentLang === 'zh') ? '/' : '/zh/';
+    window.location.href = (document.documentElement.lang === 'zh') ? '/' : '/zh/';
   };
 })();
 </script>
