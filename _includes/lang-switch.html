@@ -1,42 +1,75 @@
 <script>
 (function() {
-  // --- Determine current language from page URL ---
-  var isZhPage = window.location.pathname.startsWith('/zh/') || 
-                 window.location.pathname === '/zh';
+  // --- Detect current page ---
+  var isZh = window.location.pathname.startsWith('/zh/') || 
+             window.location.pathname === '/zh';
   
-  // --- Apply language class to HTML element ---
-  if (isZhPage) {
-    document.documentElement.lang = 'zh';
-  } else {
-    document.documentElement.lang = 'en';
-  }
+  // Update html lang
+  document.documentElement.lang = isZh ? 'zh' : 'en';
 
-  // --- Update toggle button text ---
-  function updateButton() {
-    var btn = document.getElementById('lang-toggle');
-    if (!btn) return;
-    var isZh = document.documentElement.lang === 'zh';
-    btn.innerHTML = isZh ? '🌐 English' : '🌐 中文';
-    btn.title = isZh ? 'Switch to English' : '切换到中文';
-  }
+  // --- Apply all translations ---
+  function translatePage() {
+    if (!isZh) return; // Only translate on Chinese page
 
-  // --- Toggle between EN and ZH pages ---
-  window.toggleLanguage = function() {
-    var isZh = document.documentElement.lang === 'zh';
-    if (isZh) {
-      // Switch to English (root page)
-      window.location.href = '/';
-    } else {
-      // Switch to Chinese page
-      window.location.href = '/zh/';
+    // 1. Top nav: "Homepage" → "首页"
+    var homeLink = document.querySelector('.masthead__menu-home-item a');
+    if (homeLink && homeLink.textContent.trim() === 'Homepage') {
+      homeLink.textContent = '首页';
     }
-  };
 
-  // Initialize on page load
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', updateButton);
-  } else {
-    updateButton();
+    // 2. Sidebar bio: "BEng, MEng" → "硕士（电气工程）"
+    var bio = document.querySelector('.author__bio');
+    if (bio && bio.textContent.trim() === 'BEng, MEng') {
+      bio.textContent = '西安交通大学 · 电气工程硕士';
+    }
+
+    // 3. Sidebar: Email label
+    document.querySelectorAll('.author__urls-wrapper a[href^="mailto:"]').forEach(function(a) {
+      if (a.textContent.trim() === 'Email') {
+        a.textContent = '邮箱';
+      }
+    });
+
+    // 4. Sidebar: "Google Scholar" → "谷歌学术"
+    document.querySelectorAll('.author__urls-wrapper a[href*="scholar.google"]').forEach(function(a) {
+      if (a.textContent.trim() === 'Google Scholar') {
+        a.textContent = '谷歌学术';
+      }
+    });
+
+    // 5. Sidebar: "Xi'an, China" → "西安，中国"
+    document.querySelectorAll('.author__urls-wrapper li, .page__content li, .sidebar li').forEach(function(li) {
+      var text = li.textContent.trim();
+      if (text.includes("Xi'an") || text.includes("Xi’an")) {
+        li.innerHTML = li.innerHTML.replace(/Xi'?an(,\s*(China|中国))?/gi, '西安，中国');
+      }
+    });
+
+    // 6. "Follow" button → "关注"
+    var follow = document.querySelector('.author__urls-wrapper .btn--inverse');
+    if (follow && follow.textContent.trim() === 'Follow') {
+      follow.textContent = '关注';
+    }
+
+    // 7. Update toggle button text
+    var btn = document.getElementById('lang-toggle');
+    if (btn) {
+      btn.innerHTML = '🌐 English';
+      btn.title = 'Switch to English';
+    }
   }
+
+  // Run after page is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', translatePage);
+  } else {
+    translatePage();
+  }
+
+  // --- Toggle function for button ---
+  window.toggleLanguage = function() {
+    var currentLang = document.documentElement.lang || 'en';
+    window.location.href = (currentLang === 'zh') ? '/' : '/zh/';
+  };
 })();
 </script>
