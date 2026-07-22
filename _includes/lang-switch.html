@@ -10,7 +10,7 @@
     document.title = '冀承泽 - 首页';
 
     // --- Fix nav links: same-page + translate ---
-    document.querySelectorAll('.greedy-nav .visible-links li a, .greedy-nav .visible-links a').forEach(function(a) {
+    document.querySelectorAll('.greedy-nav a').forEach(function(a) {
       if (a.id === 'lang-toggle') return;
       a.target = '_self';
       var text = a.textContent.trim();
@@ -45,7 +45,7 @@
     document.querySelectorAll('.author__urls-wrapper li').forEach(function(li) {
       var t = li.textContent;
       if (t.indexOf("Xi'an") >= 0 || t.indexOf("Xi\u2019an") >= 0) {
-        li.innerHTML = li.innerHTML.replace(/Xi'?an(,\s*(China|中国))?/gi, '西安 · 中国');
+        li.innerHTML = li.innerHTML.replace(/Xi'?an(,\s*(China|中国))?/gi, '西安，中国');
       }
     });
 
