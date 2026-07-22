@@ -50,7 +50,6 @@ author_profile: true
 
 
 <span class="anchor" id="-honors-and-awards"></span>
-<span id="-research"></span>
 # 🔬 科研&项目经历
 
 <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
@@ -69,6 +68,7 @@ author_profile: true
 - 探究了反应充分性与可逆水煤气反应的选择性对产气水平、产气比例的影响
 - 参与了电堆测试平台的搭建与运维
 
+<span class="anchor" id="-research-experience-and-projects"></span>
 # 🎖 荣誉与获奖
 - *2026.07* **西安交通大学优秀硕士学位论文**
 - *2026.06* 西安交通大学优秀毕业生干部
@@ -97,7 +97,7 @@ author_profile: true
 <span class="anchor" id="-academic-activities"></span>
 # 🚩 学术活动
 - *2024.04*，第九届亚洲电力与电气工程会议（ACPEE 2024）海报展示，中国上海。
-- *2024.01 - 2024.02*，哈利法大学（阿联酋阿布扎比）冬季学术访问。
+- *2024.01 - 2024.02*，哈利法大学（阿布扎比 · 阿联酋）冬季学术访问。
 
 # 🌍 个人足迹
 观察世界的进度：
