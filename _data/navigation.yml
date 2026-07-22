@@ -10,7 +10,8 @@ main:
     url: "#-publications"
 
   - title: "Research Experience and Projects"
-    url: "#-research"
+    url: "#-research-experience-and-projects"
+
   - title: "Honors and Awards"
     url: "#-honors-and-awards"
 
