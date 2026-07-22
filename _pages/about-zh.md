@@ -21,11 +21,11 @@ author_profile: true
 2. 虚拟电厂与综合能源系统优化
 3. 人工智能在电力系统中的应用
 
-# 🔥 新闻动态
+# 🔥 新闻动态 {: #-news}
 - *2026.06*: &nbsp;🎉🎉 祝贺雷富教授的论文被 **Nature Communications**（IF = 18.1）接收。
 - *2025.11*: &nbsp;🎉🎉 本人论文被 **International Journal of Hydrogen Energy**（IF = 8.3）接收。
 
-# 📝 论文&专利
+# 📝 论文&专利 {: #-publications}
 ## 期刊论文
 - **姬成泽**，李茹涵，邓柯，高远，杨喆，杜浩然，王俊博，周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>，吴锴<sup>[📧](mailto:wukai@mail.xjtu.edu.cn)</sup>。3D multiphysics SOEC modeling and parametric analysis for syngas production by co-electrolysis of H<sub>2</sub>O and CO<sub>2</sub>[J]. **International Journal of Hydrogen Energy**, 2026, 199: 152497. [查看论文 →](https://doi.org/10.1016/j.ijhydene.2025.152497)
 - **姬成泽**，周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>，宋旭辉，李茹涵，李存鑫，高远，邓珂，陈泽楷，吴硕，沈炜，吴锴<sup>[📧](mailto:wukai@mail.xjtu.edu.cn)</sup>。Dynamic modeling and optimal control of switching modes in reversible solid oxide cells for integrated electric-hydrogen energy system[J]. **Applied Energy**, 2025, 397: 126270. [查看论文 →](https://doi.org/10.1016/j.apenergy.2025.126270)
@@ -44,7 +44,7 @@ author_profile: true
 - 周军，**姬成泽**，李茹涵，张晓彤，戈阳阳，李金曼，吴锴。一种电氢转换装置的工作状态切换控制方法。中国专利 CN120810811A，2025年。
 - 张帆，宋旭辉，**姬成泽**，郑玉泽，李佳静，季凯龙，张晓路，龚凯翔。一种三电平逆变器中点电位有源平衡方法及抑制低频交流分量。中国专利 CN118783797A，2024年。
 
-# 🎖 荣誉与获奖
+# 🎖 荣誉与获奖 {: #-honors-and-awards}
 - *2026.04* 陈济丹，刘梓宇，刘启昌，刘垚楠，顾振钧：二等思源奖学金。
 - *2025.11* 国家奖学金。
 - *2025.09* 第十二届中国研究生能源装备创新设计大赛 全国二等奖。
@@ -59,11 +59,11 @@ author_profile: true
 - *2021.10* 西安交通大学本科二等奖学金。
 - *2020.10* 西安交通大学本科二等奖学金。
 
-# 📖 教育背景
+# 📖 教育背景 {: #-educations}
 - *2023.09 - 2026.06*，<a href="https://www.xjtu.edu.cn/" target="_blank">西安交通大学</a>，电气工程专业硕士，导师：<a href="https://gr.xjtu.edu.cn/en/web/wukai/1" target="_blank">吴锴教授</a>、<a href="https://gr.xjtu.edu.cn/en/web/zhoujun/home" target="_blank">周军教授</a>。
 - *2019.09 - 2023.06*，<a href="https://www.xjtu.edu.cn/" target="_blank">西安交通大学</a>，电气工程及其自动化专业本科，毕业论文导师：<a href="https://gr.xjtu.edu.cn/en/web/lxjia/1" target="_blank">贾立新教授</a>。
 
-# 🚩 学术活动
+# 🚩 学术活动 {: #-academic-activities}
 - *2024.04*，第九届亚洲电力与电气工程会议（ACPEE 2024）海报展示，中国上海。
 - *2024.01 - 2024.02*，哈利法大学（阿联酋阿布扎比）冬季学术访问。
 

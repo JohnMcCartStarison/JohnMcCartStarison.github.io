@@ -10,11 +10,31 @@
     // --- Browser tab title ---
     document.title = '冀承泽 - 首页';
 
-    // --- Top nav: "Homepage" → "首页" ---
-    var homeLink = document.querySelector('.masthead__menu-home-item a, .masthead__menu-item--lg a');
-    if (homeLink && homeLink.textContent.trim() === 'Homepage') {
-      homeLink.textContent = '首页';
-    }
+    // --- Top nav items: translate and update hrefs ---
+    var navItems = document.querySelectorAll('.greedy-nav .visible-links li a');
+    navItems.forEach(function(a) {
+      // Skip the language toggle button
+      if (a.id === 'lang-toggle') return;
+
+      var href = a.getAttribute('href');
+      var text = a.textContent.trim();
+
+      // Translate nav titles and keep href pointing to same anchor on both pages
+      var translations = {
+        'Homepage': { text: '首页' },
+        'About Me': { text: '关于我' },
+        'News':     { text: '新闻动态' },
+        'Publications': { text: '论文&专利' },
+        'Honors and Awards': { text: '荣誉与获奖' },
+        'Educations': { text: '教育背景' },
+        'Academic Activities': { text: '学术活动' }
+      };
+
+      if (translations[text]) {
+        a.textContent = translations[text].text;
+        // Keep href as-is (page-relative anchors work on both pages)
+      }
+    });
 
     // --- Sidebar name ---
     var nameEl = document.querySelector('.author__name');
@@ -86,18 +106,23 @@
 })();
 </script>
 
-<!-- Sidebar text alignment fix for Chinese page -->
+<!-- Sidebar alignment fix for Chinese page -->
 <style>
+/* Make all sidebar link text start at the same horizontal position */
+.author__urls.social-icons li a {
+  display: inline;
+  padding-left: 0;
+  margin-left: 0;
+}
+.author__urls.social-icons li a i,
+.author__urls.social-icons li i {
+  width: 1.25em !important;
+  text-align: center;
+}
 /* Fix Scopus img to match fa-fw icon width */
-.author__urls-wrapper li img[style*="width: 20px"] {
+.author__urls-wrapper li a img[style*="20px"] {
   width: 1.25em !important;
   height: 1.25em !important;
   object-fit: contain;
-  vertical-align: middle;
-}
-/* Keep link text and plain text aligned */
-.author__urls.social-icons li > a {
-  display: inline;
-  padding-left: 0;
 }
 </style>
