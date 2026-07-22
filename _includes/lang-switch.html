@@ -1,0 +1,55 @@
+<!-- Language Switch Logic -->
+<style>
+  /* Hide Chinese spans by default */
+  .zh-only { display: none; }
+
+  /* When Chinese is active */
+  html[lang="zh"] .zh-only { display: inline; }
+  html[lang="zh"] .en-only { display: none; }
+</style>
+
+<script>
+/**
+ * Bilingual Toggle for GitHub Pages Academic Homepage
+ *
+ * How it works:
+ * - Wrap Chinese translations in the about.md using <span class="zh-only">...</span>
+ * - The toggle button switches html[lang] between "en" and "zh"
+ * - CSS rules handle visibility of .zh-only and .en-only classes
+ * - Language preference is stored in localStorage
+ */
+
+(function() {
+  // --- 1. Initialize language from localStorage ---
+  var savedLang = localStorage.getItem('site-language');
+  if (savedLang === 'zh' || savedLang === 'en') {
+    document.documentElement.lang = savedLang;
+  }
+
+  // --- 2. Update toggle button text to match current language ---
+  function updateToggleButton() {
+    var btn = document.getElementById('lang-toggle');
+    if (!btn) return;
+    var lang = document.documentElement.lang || 'en';
+    if (lang === 'zh') {
+      btn.innerHTML = '🌐 English';
+      btn.title = 'Switch to English';
+    } else {
+      btn.innerHTML = '🌐 中文';
+      btn.title = '切换到中文';
+    }
+  }
+
+  // --- 3. Toggle function (called from masthead) ---
+  window.toggleLanguage = function() {
+    var currentLang = document.documentElement.lang || 'en';
+    var newLang = (currentLang === 'en') ? 'zh' : 'en';
+    document.documentElement.lang = newLang;
+    localStorage.setItem('site-language', newLang);
+    updateToggleButton();
+  };
+
+  // Initialize button on page load
+  document.addEventListener('DOMContentLoaded', updateToggleButton);
+})();
+</script>
