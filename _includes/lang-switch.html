@@ -7,33 +7,27 @@
   function translatePage() {
     if (!isZh) return;
 
-    // --- Browser tab title ---
     document.title = '冀承泽 - 首页';
 
-    // --- Top nav items: translate and update hrefs ---
-    var navItems = document.querySelectorAll('.greedy-nav .visible-links li a');
-    navItems.forEach(function(a) {
-      // Skip the language toggle button
+    // --- Fix nav links: same-page navigation ---
+    document.querySelectorAll('.greedy-nav .visible-links li a, .greedy-nav .visible-links a').forEach(function(a) {
+      // Keep lang toggle, fix all other nav links
       if (a.id === 'lang-toggle') return;
-
-      var href = a.getAttribute('href');
+      a.target = '_self'; // Override any base target
+      
+      // Translate nav titles
       var text = a.textContent.trim();
-
-      // Translate nav titles and keep href pointing to same anchor on both pages
-      var translations = {
-        'Homepage': { text: '首页' },
-        'About Me': { text: '关于我' },
-        'News':     { text: '新闻动态' },
-        'Publications': { text: '论文&专利' },
-        'Honors and Awards': { text: '荣誉与获奖' },
-        'Educations': { text: '教育背景' },
-        'Academic Activities': { text: '学术活动' }
+      var t = {
+        'Homepage': '首页', 'About Me': '关于我', 'News': '新闻动态',
+        'Publications': '论文&专利', 'Honors and Awards': '荣誉与获奖',
+        'Educations': '教育背景', 'Academic Activities': '学术活动'
       };
+      if (t[text]) a.textContent = t[text];
+    });
 
-      if (translations[text]) {
-        a.textContent = translations[text].text;
-        // Keep href as-is (page-relative anchors work on both pages)
-      }
+    // --- Add target="_blank" to external links (not starting with # or /) ---
+    document.querySelectorAll('a:not([href^="#"]):not([href^="/"]):not([href^="mailto"])').forEach(function(a) {
+      a.target = '_blank';
     });
 
     // --- Sidebar name ---
@@ -58,7 +52,7 @@
       }
     });
 
-    // --- Helper: replace text node content ---
+    // --- Helper: replace text node ---
     function replaceTextNode(parent, search, replace) {
       parent.childNodes.forEach(function(n) {
         if (n.nodeType === 3 && n.textContent.trim() === search) {
@@ -67,26 +61,19 @@
       });
     }
 
-    // --- Email ---
     document.querySelectorAll('.author__urls-wrapper a[href^="mailto:"]').forEach(function(a) {
       replaceTextNode(a, 'Email', '邮件联系');
     });
-
-    // --- Google Scholar ---
     document.querySelectorAll('.author__urls-wrapper a[href*="scholar.google"]').forEach(function(a) {
       replaceTextNode(a, 'Google Scholar', '谷歌学术主页');
     });
-
-    // --- Scopus ---
     document.querySelectorAll('.author__urls-wrapper a[href*="scopus"]').forEach(function(a) {
       replaceTextNode(a, 'Scopus', 'Scopus个人主页');
     });
 
-    // --- Follow button ---
     var f = document.querySelector('.author__urls-wrapper .btn--inverse');
     if (f && f.textContent.trim() === 'Follow') f.textContent = '关注';
 
-    // --- Toggle button ---
     var btn = document.getElementById('lang-toggle');
     if (btn) {
       btn.innerHTML = '🌐 English';
@@ -106,23 +93,38 @@
 })();
 </script>
 
-<!-- Sidebar alignment fix for Chinese page -->
+<!-- Sidebar alignment fix -->
 <style>
-/* Make all sidebar link text start at the same horizontal position */
-.author__urls.social-icons li a {
-  display: inline;
-  padding-left: 0;
-  margin-left: 0;
-}
-.author__urls.social-icons li a i,
-.author__urls.social-icons li i {
+/* Force all sidebar icon containers to use same width */
+.author__urls.social-icons li i,
+.author__urls.social-icons li i.fa,
+.author__urls.social-icons li i.fas,
+.author__urls.social-icons li i.fab {
   width: 1.25em !important;
-  text-align: center;
+  min-width: 1.25em !important;
+  max-width: 1.25em !important;
+  text-align: center !important;
+  display: inline-block !important;
 }
-/* Fix Scopus img to match fa-fw icon width */
-.author__urls-wrapper li a img[style*="20px"] {
+/* Force sidebar links to be plain inline (no padding, no margin) */
+.author__urls.social-icons li a {
+  display: inline !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  text-decoration: none;
+}
+/* Fix Scopus img to exact fa-fw width */
+.author__urls-wrapper li a img {
   width: 1.25em !important;
   height: 1.25em !important;
+  min-width: 1.25em !important;
   object-fit: contain;
+  vertical-align: middle;
+}
+/* Ensure all li items start at same base */
+.author__urls.social-icons li {
+  line-height: 1.8;
 }
 </style>
