@@ -24,7 +24,7 @@ author_profile: true
 
 <span class="anchor" id="-news"></span>
 # 🔥 新闻动态
-- *2026.06*: &nbsp;🎉🎉 祝贺雷富教授的论文被 **Nature Communications**（IF = 18.1）接收。
+- *2026.06*: &nbsp;🎉🎉 祝贺付磊老师的论文被 **Nature Communications**（IF = 18.1）接收。
 - *2025.11*: &nbsp;🎉🎉 本人论文被 **International Journal of Hydrogen Energy**（IF = 8.3）接收。
 
 
