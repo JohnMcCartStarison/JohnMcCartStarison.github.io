@@ -55,13 +55,16 @@ author_profile: true
 
 <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
 <b>1. 可逆固体氧化物电池的电流超调形成机制及其抑制措施研究（陕西省重点研发计划）</b>
-<b style="white-space: nowrap;">2023.09 – 2024.12 学生负责人</b>
+<b style="white-space: nowrap;">2023.09 – 2024.12  学生负责人</b>
 </div>
 - 基于COMSOL建立三维RSOC多物理场模型，揭示动态运行过程中的超调机理
 - 结合Simulink设计双向适应性模糊控制策略，实现模式切换平滑调控
 - 提出通气优化方法抑制动态超调，提升RSOC运行稳定性
 
-**2. 面向电网用长时储能的共电解关键技术研究（电网公司科技项目）** &nbsp; **2025.03 – 2026.09  子课题学生负责人**
+<div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+<b>2. 面向电网用长时储能的共电解关键技术研究（电网公司科技项目）</b>
+<b style="white-space: nowrap;">2025.03 – 2026.09  子课题学生负责人</b>
+</div>
 - 基于Comsol建立共电解SOEC电堆模型，从结构和运行参数探究影响共电解产气能力的关键因素
 - 探究反应充分性与可逆水煤气反应的选择性对产气水平、产气比例的影响
 - 参与搭建电堆测试平台
