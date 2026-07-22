@@ -53,7 +53,10 @@ author_profile: true
 <span id="-research"></span>
 # 🔬 科研&项目经历
 
-**1. 可逆固体氧化物电池的电流超调形成机制及其抑制措施研究（陕西省重点研发计划）** &nbsp; **2023.09 – 2024.12 学生负责人**
+<div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+<b>1. 可逆固体氧化物电池的电流超调形成机制及其抑制措施研究（陕西省重点研发计划）</b>
+<b style="white-space: nowrap;">2023.09 – 2024.12 学生负责人</b>
+</div>
 - 基于COMSOL建立三维RSOC多物理场模型，揭示动态运行过程中的超调机理
 - 结合Simulink设计双向适应性模糊控制策略，实现模式切换平滑调控
 - 提出通气优化方法抑制动态超调，提升RSOC运行稳定性
