@@ -64,6 +64,7 @@ author_profile: true
 - 参与搭建电堆测试平台
 
 # 🎖 荣誉与获奖
+- *2026.07* 西安交通大学优秀硕士学位论文
 - *2026.06* 西安交通大学优秀毕业生干部
 - *2026.04* “一陈三刘一顾”二等奖学金
 - *2025.11* 国家奖学金
@@ -83,7 +84,7 @@ author_profile: true
 
 <span class="anchor" id="-educations"></span>
 # 📖 教育背景
-- *2023.09 - 2026.06*，<a href="https://www.xjtu.edu.cn/" target="_blank">西安交通大学</a>，电气工程专业硕士，导师：<a href="https://gr.xjtu.edu.cn/en/web/wukai/1" target="_blank">吴锴教授</a>、<a href="https://gr.xjtu.edu.cn/en/web/zhoujun/home" target="_blank">周军教授</a>。
+- *2023.09 - 2026.06*，<a href="https://www.xjtu.edu.cn/" target="_blank">西安交通大学</a>，电气工程专业硕士，导师：<a href="https://gr.xjtu.edu.cn/en/web/wukai/1" target="_blank">吴锴教授</a>、<a href="https://gr.xjtu.edu.cn/en/web/zhoujun/home" target="_blank">周峻教授</a>。
 - *2019.09 - 2023.06*，<a href="https://www.xjtu.edu.cn/" target="_blank">西安交通大学</a>，电气工程及其自动化专业本科，毕业论文导师：<a href="https://gr.xjtu.edu.cn/en/web/lxjia/1" target="_blank">贾立新教授</a>。
 
 
