@@ -3,7 +3,6 @@ permalink: /zh/
 title: ""
 excerpt: ""
 author_profile: true
-lang: zh
 ---
 
 {% if site.google_scholar_stats_use_cdn %}
@@ -32,7 +31,6 @@ lang: zh
 - 周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>，**姬成泽**，李茹涵，宋旭辉，吴锴，成永红。电解水制氢技术发展现状及其在新型电力系统中的应用进展[J]. **高电压技术**,2025,51(05):2096-2113. [查看论文 →](https://doi.org/10.13336/j.1003-6520.hve.20242050)
 - **姬成泽**，贾立新<sup>[📧](mailto:lxjia@xjtu.edu.cn)</sup>，李景辉。基于改进YOLOv5s的两种输电杆塔缺陷检测研究[J]. **计算机技术与发展**,2024,34(02):180-185. [查看论文 →](https://doi.org/10.3969/j.issn.1673-629X.2024.02.026)
 - 周军，孙月月，李茹涵，**姬成泽**，雷富，吴锴，成永红。面向电氢耦合能源系统的可逆固体氧化物电池研究进展[J]. **西安交通大学学报**,2026,60(04):72-83. [查看论文 →](https://kns.cnki.net/kcms2/article/abstract?v=Omth-A4cfW_SGoNKshSZAcSlLx6r7c21SudN8xm5sk3BG_dnV8NDgmFo6yg10OMHPj-SBgm46NmqIashIuJqyxi0Wc4hht_U4wy5pt9dCTOpj2KZ6tOvsfNnJgARTG1_58fhd004l3Lrlv1edVDJQQ6jeoEsVesjoDvw6NPueZJAI3HwJdWuTw==&uniplatform=NZKPT&language=CHS)
-
 - 仇子桐，张晓彤，戈阳阳，李茹涵，李浩楠，**姬成泽**，吴锴，周军。可逆PEM燃料电池建模及切换过程系统效率分析研究[J]. **电源技术**,2025,49(03):596-607. [查看论文 →](https://doi.org/10.3969/j.issn.1002-087X.2025.03.018)
 - 王俊博，邓珂，赵红飞，唐琦，张寅，**姬成泽**，周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>。基于多尺度模拟的固体氧化物电解池多孔电极设计及电场仿真[J]. **陶瓷学报**,2026,47(01):149-158. [查看论文 →](https://doi.org/10.13957/j.cnki.tcxb.2026.01.016)
 

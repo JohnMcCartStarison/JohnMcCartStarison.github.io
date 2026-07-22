@@ -1,7 +1,7 @@
 <div class="masthead">
   <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
+    <div class="masthead__menu" style="display: flex; align-items: center;">
+      <nav id="site-nav" class="greedy-nav" style="flex: 1;">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="#about-me">Homepage</a></li>
@@ -10,21 +10,19 @@
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
-
-        <!-- Language Switch Button -->
-        <li class="masthead__menu-item" style="list-style: none; margin-left: 15px;">
-          <a id="lang-toggle" href="#" onclick="toggleLanguage(); return false;"
-             style="display: inline-block; padding: 6px 14px; border-radius: 20px;
-                    background: #2F5496; color: white !important; font-size: 13px;
-                    font-weight: 600; text-decoration: none; letter-spacing: 0.5px;
-                    transition: background 0.3s;"
-             onmouseover="this.style.background='#1a3a6e'"
-             onmouseout="this.style.background='#2F5496'">
-            🌐 中文
-          </a>
-        </li>
-
       </nav>
+      <!-- Language Switch Button: far right -->
+      <a id="lang-toggle" href="#" onclick="toggleLanguage(); return false;"
+         style="flex-shrink: 0; margin-left: 12px; display: inline-block;
+                padding: 5px 14px; border-radius: 20px;
+                background: #2F5496; color: white !important; font-size: 13px;
+                font-weight: 600; text-decoration: none; white-space: nowrap;
+                line-height: 1.5; letter-spacing: 0.5px;
+                transition: background 0.3s;"
+         onmouseover="this.style.background='#1a3a6e'"
+         onmouseout="this.style.background='#2F5496'">
+        🌐 中文
+      </a>
     </div>
   </div>
 </div>
