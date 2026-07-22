@@ -54,6 +54,7 @@ PEM fuel cells[J]. **Chinese Journal of Power Sources**,2025,49(03):596-607. [Vi
 - Jun Zhou, **Chengze Ji**, Ruhuan Li, Xiaotong Zhang, Yangyang Ge, Jinman Li, Kai Wu. A control method for switching operating states in an electricity–hydrogen conversion device. CN Patent CN120810811A, 2025.
 - Fan Zhang, Xuhui Song, **Chengze Ji**, Yuze Zheng, Jiajing Li, Kailong Ji, Xiaolu Zhang, Kaixiang Gong. An active neutral-point voltage balancing method for suppressing low-frequency AC components in three-level inverters. CN Patent CN118783797A, 2024.
 
+<span class='anchor' id='-research-exxperience-and-projects'></span>
 
 # 🔬 Research Experience and Projects
 
