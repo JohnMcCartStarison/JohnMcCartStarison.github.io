@@ -32,26 +32,26 @@ author_profile: true
 # 📝 论文&专利
 ## 期刊论文
 - **姬成泽**，李茹涵，邓柯，高远，杨喆，杜浩然，王俊博，周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>，吴锴<sup>[📧](mailto:wukai@mail.xjtu.edu.cn)</sup>。3D multiphysics SOEC modeling and parametric analysis for syngas production by co-electrolysis of H<sub>2</sub>O and CO<sub>2</sub>[J]. **International Journal of Hydrogen Energy**, 2026, 199: 152497. [查看论文 →](https://doi.org/10.1016/j.ijhydene.2025.152497)
-- **姬成泽**，周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>，宋旭辉，李茹涵，李存鑫，高远，邓珂，陈泽楷，吴硕，沈炜，吴锴<sup>[📧](mailto:wukai@mail.xjtu.edu.cn)</sup>。Dynamic modeling and optimal control of switching modes in reversible solid oxide cells for integrated electric-hydrogen energy system[J]. **Applied Energy**, 2025, 397: 126270. [查看论文 →](https://doi.org/10.1016/j.apenergy.2025.126270)
-- **姬成泽**，宗铮，戈阳阳，张晓彤，吴锴，周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>。可逆固体氧化物电池电-氢双向瞬态转换特性及电流超调机制[J]. **高电压技术**, 2025, 51(05): 2200-2209. [查看论文 →](https://doi.org/10.13336/j.1003-6520.hve.20240432)
+- **姬成泽**，周<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>，宋旭辉，李茹涵，李存鑫，高远，邓珂，陈泽楷，吴硕，沈炜，吴锴<sup>[📧](mailto:wukai@mail.xjtu.edu.cn)</sup>。Dynamic modeling and optimal control of switching modes in reversible solid oxide cells for integrated electric-hydrogen energy system[J]. **Applied Energy**, 2025, 397: 126270. [查看论文 →](https://doi.org/10.1016/j.apenergy.2025.126270)
+- **冀承泽**，宗正，戈阳阳，张潇桐，吴锴，周峻<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>。可逆固体氧化物电池电-氢双向瞬态转换特性及电流超调机制[J]. **高电压技术**, 2025, 51(05): 2200-2209. [查看论文 →](https://doi.org/10.13336/j.1003-6520.hve.20240432)
 - 周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>，**姬成泽**，李茹涵，宋旭辉，吴锴，成永红。电解水制氢技术发展现状及其在新型电力系统中的应用进展[J]. **高电压技术**,2025,51(05):2096-2113. [查看论文 →](https://doi.org/10.13336/j.1003-6520.hve.20242050)
-- **姬成泽**，贾立新<sup>[📧](mailto:lxjia@xjtu.edu.cn)</sup>，李景辉。基于改进YOLOv5s的两种输电杆塔缺陷检测研究[J]. **计算机技术与发展**,2024,34(02):180-185. [查看论文 →](https://doi.org/10.3969/j.issn.1673-629X.2024.02.026)
-- 周军，孙月月，李茹涵，**姬成泽**，雷富，吴锴，成永红。面向电氢耦合能源系统的可逆固体氧化物电池研究进展[J]. **西安交通大学学报**,2026,60(04):72-83. [查看论文 →](https://kns.cnki.net/kcms2/article/abstract?v=Omth-A4cfW_SGoNKshSZAcSlLx6r7c21SudN8xm5sk3BG_dnV8NDgmFo6yg10OMHPj-SBgm46NmqIashIuJqyxi0Wc4hht_U4wy5pt9dCTOpj2KZ6tOvsfNnJgARTG1_58fhd004l3Lrlv1edVDJQQ6jeoEsVesjoDvw6NPueZJAI3HwJdWuTw==&uniplatform=NZKPT&language=CHS)
-- 仇子桐，张晓彤，戈阳阳，李茹涵，李浩楠，**姬成泽**，吴锴，周军。可逆PEM燃料电池建模及切换过程系统效率分析研究[J]. **电源技术**,2025,49(03):596-607. [查看论文 →](https://doi.org/10.3969/j.issn.1002-087X.2025.03.018)
-- 王俊博，邓珂，赵红飞，唐琦，张寅，**姬成泽**，周军<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>。基于多尺度模拟的固体氧化物电解池多孔电极设计及电场仿真[J]. **陶瓷学报**,2026,47(01):149-158. [查看论文 →](https://doi.org/10.13957/j.cnki.tcxb.2026.01.016)
+- **冀承泽**，贾立新<sup>[📧](mailto:lxjia@xjtu.edu.cn)</sup>，李景辉。基于改进YOLOv5s的两种输电杆塔缺陷检测研究[J]. **计算机技术与发展**,2024,34(02):180-185. [查看论文 →](https://doi.org/10.3969/j.issn.1673-629X.2024.02.026)
+- 周峻，孙跃跃，李儒欢，**冀承泽**，付磊，吴锴，成永红. 面向电氢耦合能源系统的可逆固体氧化物电池研究进展[J]. **西安交通大学学报**,2026,60(04):72-83. [查看论文 →](https://kns.cnki.net/kcms2/article/abstract?v=Omth-A4cfW_SGoNKshSZAcSlLx6r7c21SudN8xm5sk3BG_dnV8NDgmFo6yg10OMHPj-SBgm46NmqIashIuJqyxi0Wc4hht_U4wy5pt9dCTOpj2KZ6tOvsfNnJgARTG1_58fhd004l3Lrlv1edVDJQQ6jeoEsVesjoDvw6NPueZJAI3HwJdWuTw==&uniplatform=NZKPT&language=CHS)
+- 邱子桐，张潇桐，戈阳阳，李儒欢，李浩南，**冀承泽**，吴锴，周峻. 可逆PEM燃料电池建模及切换过程系统效率分析研究[J]. **电源技术**,2025,49(03):596-607. [查看论文 →](https://doi.org/10.3969/j.issn.1002-087X.2025.03.018)
+- 王俊波，邓可，赵鸿飞，唐琪，张殷，**冀承泽**，周峻<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>. 基于多尺度模拟的固体氧化物电解池多孔电极设计及电场仿真[J]. **陶瓷学报**,2026,47(01):149-158. [查看论文 →](https://doi.org/10.13957/j.cnki.tcxb.2026.01.016)
 
 ## 会议论文
 - **Chengze Ji**, Jun Zhou<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>, Kai Wu, Zheng Zong. Research on current density overshoot of reversible solid oxide cell during mode switching[C]//2024 9th Asia Conference on Power and Electrical Engineering (**ACPEE**). IEEE, 2024: 2706-2710. [查看论文 →](https://doi.org/10.1109/ACPEE60788.2024.10532327)
 - Ruhuan Li, Jun Zhou<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>, Zitong Qiu, **Chengze Ji**. Optimization of an integrated energy system with reversible solid oxide cell based on shapley's value method[C]//2024 3rd Asia Power and Electrical Technology Conference (**APET**). IEEE, 2024: 786-791. [查看论文 →](https://doi.org/10.1109/APET63768.2024.10882793)
 
 ## 专利
-- 周军，**姬成泽**，李茹涵，张晓彤，戈阳阳，李金曼，吴锴。一种电氢转换装置的工作状态切换控制方法。中国专利 CN120810811A，2025年。
-- 张帆，宋旭辉，**姬成泽**，郑玉泽，李佳静，季凯龙，张晓路，龚凯翔。一种三电平逆变器中点电位有源平衡方法及抑制低频交流分量。中国专利 CN118783797A，2024年。
+- 周峻，**冀承泽**，李儒欢，张潇桐，戈阳阳，李锦满，吴锴.  一种电氢转换装置的工作状态切换控制方法. 中国专利 CN120810811A，2025年.
+- 张帆，宋旭晖，**冀承泽**，郑宇泽，李家劲，纪凯龙，张晓璐，龚凯翔. 一种三电平逆变器中点电位有源平衡方法及抑制低频交流分量. 中国专利 CN118783797A，2024年.
 
 
 <span class="anchor" id="-honors-and-awards"></span>
 <span id="-research"></span>
-# 🔬 科研项目/研究经历
+# 🔬 科研&项目经历
 
 **1. 可逆固体氧化物电池的电流超调形成机制及其抑制措施研究（陕西省重点研发计划）** &nbsp; **(学生负责人) 2023.09 – 2024.12**
 - 基于COMSOL建立三维RSOC多物理场模型，揭示动态运行过程中的超调机理
