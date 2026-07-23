@@ -34,7 +34,6 @@ layout: compress
 
           <hr>
 
-
           <!-- GoatCounter Analytics -->
           <script data-goatcounter="https://johnmccart.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
@@ -43,7 +42,6 @@ layout: compress
 
             <h3>💻 <span class="stat-en">Website Statistics</span><span class="stat-zh" style="display:none">网站统计</span></h3>
 
-
             <div class="statistics-box">
 
               <p>
@@ -51,39 +49,52 @@ layout: compress
                 <span id="visitor-count">--</span>
               </p>
 
-
               <p>
                 👀 <span class="stat-en">Page Views:</span><span class="stat-zh" style="display:none">页面浏览量:</span>
                 <span id="pageview-count">--</span>
               </p>
 
-
             </div>
-
 
           </div>
 
-
           <script>
-          // Simple localStorage-based visitor/pageview counter
+          // Counter using countapi.xyz (global shared count) + localStorage fallback
           (function() {
-            // Page views: increment on every page load
-            var pv = parseInt(localStorage.getItem("pageview_count") || "0", 10) + 1;
-            localStorage.setItem("pageview_count", pv);
-            document.getElementById("pageview-count").textContent = pv;
+            var ns = "johnmccart.github.io";
 
-            // Visitors: check if this is a known device with a recent visit
-            var today = new Date().toDateString();
-            var lastVisit = localStorage.getItem("last_visit");
-            var uv = parseInt(localStorage.getItem("visitor_count") || "0", 10);
-            if (lastVisit !== today) {
-              uv += 1;
-              localStorage.setItem("visitor_count", uv);
-              localStorage.setItem("last_visit", today);
+            // Page views: increment on every page load
+            fetch("https://api.countapi.xyz/hit/" + ns + "/pageviews")
+              .then(function(r) { return r.json(); })
+              .then(function(d) {
+                document.getElementById("pageview-count").textContent = d.value;
+                localStorage.setItem("cached_pv", d.value);
+              })
+              .catch(function() {
+                var c = localStorage.getItem("cached_pv");
+                if (c) document.getElementById("pageview-count").textContent = c;
+              });
+
+            // Visitors: increment once per device
+            var vkey = "visitor_done_" + ns;
+            function showVisitors(v) {
+              document.getElementById("visitor-count").textContent = v;
+              localStorage.setItem("cached_uv", v);
             }
-            document.getElementById("visitor-count").textContent = uv;
+            if (!localStorage.getItem(vkey)) {
+              fetch("https://api.countapi.xyz/hit/" + ns + "/visitors")
+                .then(function(r) { return r.json(); })
+                .then(function(d) { showVisitors(d.value); localStorage.setItem(vkey, "1"); })
+                .catch(function() { var c = localStorage.getItem("cached_uv"); if (c) showVisitors(c); });
+            } else {
+              fetch("https://api.countapi.xyz/get/" + ns + "/visitors")
+                .then(function(r) { return r.json(); })
+                .then(function(d) { showVisitors(d.value); })
+                .catch(function() { var c = localStorage.getItem("cached_uv"); if (c) showVisitors(c); });
+            }
           })();
           </script>
+
         </section>
 
       </div>
@@ -92,59 +103,30 @@ layout: compress
 
   </div>
 
-
   {% include scripts.html %}
   {% include lang-switch.html %}
 
-
-
 <style>
-
 .visitor-statistics {
-
     text-align: center;
-
     margin-top: 40px;
-
     margin-bottom: 30px;
-
 }
-
-
 .visitor-statistics h3 {
-
     margin-bottom: 25px;
-
 }
-
-
 .statistics-box {
-
     display: inline-block;
-
     padding: 15px 35px;
-
     border-radius: 12px;
-
     background: #f7f7f7;
-
     font-size: 16px;
-
     line-height: 1.8;
-
 }
-
-
 .statistics-box p {
-
     margin: 5px 0;
-
 }
-
-
 </style>
 
-
 </body>
-
 </html>
