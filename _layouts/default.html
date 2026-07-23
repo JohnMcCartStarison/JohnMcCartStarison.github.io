@@ -59,42 +59,54 @@ layout: compress
           </div>
 
           <script>
-          // Counter using countapi.xyz (global shared count) + localStorage fallback
+          // Counter: localStorage first (always shows a number), then sync with countapi.xyz
           (function() {
             var ns = "johnmccart.github.io";
 
-            // Page views: increment on every page load
+            var pv = parseInt(localStorage.getItem("cached_pv") || "0", 10) + 1;
+            localStorage.setItem("cached_pv", pv);
+            document.getElementById("pageview-count").textContent = pv;
+
             fetch("https://api.countapi.xyz/hit/" + ns + "/pageviews")
               .then(function(r) { return r.json(); })
               .then(function(d) {
                 document.getElementById("pageview-count").textContent = d.value;
                 localStorage.setItem("cached_pv", d.value);
               })
-              .catch(function() {
-                var c = localStorage.getItem("cached_pv");
-                if (c) document.getElementById("pageview-count").textContent = c;
-              });
+              .catch(function() {});
 
-            // Visitors: increment once per device
             var vkey = "visitor_done_" + ns;
-            function showVisitors(v) {
-              document.getElementById("visitor-count").textContent = v;
-              localStorage.setItem("cached_uv", v);
-            }
+            var uv = parseInt(localStorage.getItem("cached_uv") || "0", 10);
             if (!localStorage.getItem(vkey)) {
+              uv += 1;
+              localStorage.setItem("cached_uv", uv);
+              localStorage.setItem(vkey, "1");
+            }
+            document.getElementById("visitor-count").textContent = uv;
+
+            function syncVisitors() {
               fetch("https://api.countapi.xyz/hit/" + ns + "/visitors")
                 .then(function(r) { return r.json(); })
-                .then(function(d) { showVisitors(d.value); localStorage.setItem(vkey, "1"); })
-                .catch(function() { var c = localStorage.getItem("cached_uv"); if (c) showVisitors(c); });
+                .then(function(d) {
+                  document.getElementById("visitor-count").textContent = d.value;
+                  localStorage.setItem("cached_uv", d.value);
+                })
+                .catch(function() {});
+            }
+            if (!localStorage.getItem(vkey + "_synced")) {
+              syncVisitors();
+              localStorage.setItem(vkey + "_synced", "1");
             } else {
               fetch("https://api.countapi.xyz/get/" + ns + "/visitors")
                 .then(function(r) { return r.json(); })
-                .then(function(d) { showVisitors(d.value); })
-                .catch(function() { var c = localStorage.getItem("cached_uv"); if (c) showVisitors(c); });
+                .then(function(d) {
+                  document.getElementById("visitor-count").textContent = d.value;
+                  localStorage.setItem("cached_uv", d.value);
+                })
+                .catch(function() {});
             }
           })();
           </script>
-
         </section>
 
       </div>
