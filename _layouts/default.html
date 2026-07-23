@@ -35,28 +35,26 @@ layout: compress
           <hr>
 
 
-          <!-- Website Visitor Statistics -->
+          <!-- GoatCounter Analytics -->
+          <script data-goatcounter="https://johnmccart.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
+          <!-- Website Visitor Statistics -->
           <div class="visitor-statistics">
 
-            <h3>💻 Website Statistics</h3>
+            <h3>💻 <span class="stat-en">Website Statistics</span><span class="stat-zh" style="display:none">网站统计</span></h3>
 
 
             <div class="statistics-box">
 
               <p>
-                👤 Visitors:
-                <span id="busuanzi_value_site_uv">
-                  --
-                </span>
+                👤 <span class="stat-en">Visitors:</span><span class="stat-zh" style="display:none">访问人数:</span>
+                <span id="visitor-count">--</span>
               </p>
 
 
               <p>
-                👀 Page Views:
-                <span id="busuanzi_value_site_pv">
-                  --
-                </span>
+                👀 <span class="stat-en">Page Views:</span><span class="stat-zh" style="display:none">页面浏览量:</span>
+                <span id="pageview-count">--</span>
               </p>
 
 
@@ -66,30 +64,24 @@ layout: compress
           </div>
 
 
-          <!-- Busuanzi Counter -->
-          <script async 
-          src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-          </script>
-
-
           <script>
+          // Fetch total site count from GoatCounter public counter
           (function() {
-            var uv = document.getElementById("busuanzi_value_site_uv");
-            if (uv && uv.textContent.trim() === "--") {
-              var cached = localStorage.getItem("visitor_count");
-              if (cached) uv.textContent = cached;
-            }
-            var pv = document.getElementById("busuanzi_value_site_pv");
-            if (pv && pv.textContent.trim() === "--") {
-              var cached = localStorage.getItem("pageview_count");
-              if (cached) pv.textContent = cached;
-            }
-            setTimeout(function() {
-              var uv2 = document.getElementById("busuanzi_value_site_uv");
-              var pv2 = document.getElementById("busuanzi_value_site_pv");
-              if (uv2 && uv2.textContent.trim() !== "--") localStorage.setItem("visitor_count", uv2.textContent.trim());
-              if (pv2 && pv2.textContent.trim() !== "--") localStorage.setItem("pageview_count", pv2.textContent.trim());
-            }, 5000);
+            fetch("https://johnmccart.goatcounter.com/counter//count.json")
+              .then(function(r) { return r.json(); })
+              .then(function(data) {
+                var c = data.count || "--";
+                document.getElementById("visitor-count").textContent = c;
+                document.getElementById("pageview-count").textContent = c;
+                localStorage.setItem("goatcounter_count", c);
+              })
+              .catch(function() {
+                var c = localStorage.getItem("goatcounter_count");
+                if (c) {
+                  document.getElementById("visitor-count").textContent = c;
+                  document.getElementById("pageview-count").textContent = c;
+                }
+              });
           })();
           </script>
         </section>

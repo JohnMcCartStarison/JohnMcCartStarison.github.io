@@ -18,7 +18,7 @@
         'Homepage': '首页', 'About Me': '关于我', 'News': '新闻动态',
         'Publications': '论文&专利', 'Honors and Awards': '荣誉与获奖',
         'Research Experience and Projects': '科研&项目经历',
-        'Educations': '教育背景',  'Academic Activities': '学术活动',
+        'Educations': '教育背景',
       };
       if (t[text]) a.textContent = t[text];
     });
@@ -46,7 +46,7 @@
     document.querySelectorAll('.author__urls-wrapper li').forEach(function(li) {
       var t = li.textContent;
       if (t.indexOf("Xi'an") >= 0 || t.indexOf("Xi\u2019an") >= 0) {
-        li.innerHTML = li.innerHTML.replace(/Xi'?an(,\s*(China|中国))?/gi, '西安 · 中国');
+        li.innerHTML = li.innerHTML.replace(/Xi'?an(,\s*(China|中国))?/gi, '西安，中国');
       }
     });
 
@@ -153,4 +153,14 @@
 html {
   scroll-padding-top: 3em;
 }
+</style>
+
+<!-- Bilingual statistics labels -->
+<style>
+/* Default: show EN, hide ZH */
+.stat-zh { display: none !important; }
+.stat-en { display: inline !important; }
+/* When Chinese: show ZH, hide EN */
+html[lang="zh"] .stat-zh { display: inline !important; }
+html[lang="zh"] .stat-en { display: none !important; }
 </style>
