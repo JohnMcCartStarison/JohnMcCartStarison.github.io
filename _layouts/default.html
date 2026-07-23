@@ -39,74 +39,38 @@ layout: compress
 
           <!-- Website Visitor Statistics -->
           <div class="visitor-statistics">
-
             <h3>💻 <span class="stat-en">Website Statistics</span><span class="stat-zh" style="display:none">网站统计</span></h3>
-
             <div class="statistics-box">
-
-              <p>
-                👤 <span class="stat-en">Visitors:</span><span class="stat-zh" style="display:none">访问人数:</span>
-                <span id="visitor-count">--</span>
-              </p>
-
-              <p>
-                👀 <span class="stat-en">Page Views:</span><span class="stat-zh" style="display:none">页面浏览量:</span>
-                <span id="pageview-count">--</span>
-              </p>
-
+              <p>👤 <span class="stat-en">Visitors:</span><span class="stat-zh" style="display:none">访问人数:</span> <span id="visitor-count">--</span></p>
+              <p>👀 <span class="stat-en">Page Views:</span><span class="stat-zh" style="display:none">页面浏览量:</span> <span id="pageview-count">--</span></p>
             </div>
-
           </div>
 
+          <!-- Busuanzi counters -->
+          <span id="busuanzi_value_site_uv" style="display:none"></span>
+          <span id="busuanzi_value_site_pv" style="display:none"></span>
+          <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
           <script>
-          // Counter: localStorage first (always shows a number), then sync with countapi.xyz
           (function() {
-            var ns = "johnmccart.github.io";
-
-            var pv = parseInt(localStorage.getItem("cached_pv") || "0", 10) + 1;
-            localStorage.setItem("cached_pv", pv);
-            document.getElementById("pageview-count").textContent = pv;
-
-            fetch("https://api.countapi.xyz/hit/" + ns + "/pageviews")
-              .then(function(r) { return r.json(); })
-              .then(function(d) {
-                document.getElementById("pageview-count").textContent = d.value;
-                localStorage.setItem("cached_pv", d.value);
-              })
-              .catch(function() {});
-
-            var vkey = "visitor_done_" + ns;
-            var uv = parseInt(localStorage.getItem("cached_uv") || "0", 10);
-            if (!localStorage.getItem(vkey)) {
-              uv += 1;
-              localStorage.setItem("cached_uv", uv);
-              localStorage.setItem(vkey, "1");
-            }
-            document.getElementById("visitor-count").textContent = uv;
-
-            function syncVisitors() {
-              fetch("https://api.countapi.xyz/hit/" + ns + "/visitors")
-                .then(function(r) { return r.json(); })
-                .then(function(d) {
-                  document.getElementById("visitor-count").textContent = d.value;
-                  localStorage.setItem("cached_uv", d.value);
-                })
-                .catch(function() {});
-            }
-            if (!localStorage.getItem(vkey + "_synced")) {
-              syncVisitors();
-              localStorage.setItem(vkey + "_synced", "1");
-            } else {
-              fetch("https://api.countapi.xyz/get/" + ns + "/visitors")
-                .then(function(r) { return r.json(); })
-                .then(function(d) {
-                  document.getElementById("visitor-count").textContent = d.value;
-                  localStorage.setItem("cached_uv", d.value);
-                })
-                .catch(function() {});
-            }
+            var pv = localStorage.getItem("pageview_count");
+            var uv = localStorage.getItem("visitor_count");
+            if (pv) document.getElementById("pageview-count").textContent = pv;
+            if (uv) document.getElementById("visitor-count").textContent = uv;
+            setTimeout(function() {
+              var bspv = document.getElementById("busuanzi_value_site_pv");
+              var bsuv = document.getElementById("busuanzi_value_site_uv");
+              if (bspv && bspv.textContent && bspv.textContent !== "") {
+                document.getElementById("pageview-count").textContent = bspv.textContent;
+                localStorage.setItem("pageview_count", bspv.textContent);
+              }
+              if (bsuv && bsuv.textContent && bsuv.textContent !== "") {
+                document.getElementById("visitor-count").textContent = bsuv.textContent;
+                localStorage.setItem("visitor_count", bsuv.textContent);
+              }
+            }, 3000);
           })();
           </script>
+
         </section>
 
       </div>
@@ -119,25 +83,10 @@ layout: compress
   {% include lang-switch.html %}
 
 <style>
-.visitor-statistics {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 30px;
-}
-.visitor-statistics h3 {
-    margin-bottom: 25px;
-}
-.statistics-box {
-    display: inline-block;
-    padding: 15px 35px;
-    border-radius: 12px;
-    background: #f7f7f7;
-    font-size: 16px;
-    line-height: 1.8;
-}
-.statistics-box p {
-    margin: 5px 0;
-}
+.visitor-statistics { text-align: center; margin-top: 40px; margin-bottom: 30px; }
+.visitor-statistics h3 { margin-bottom: 25px; }
+.statistics-box { display: inline-block; padding: 15px 35px; border-radius: 12px; background: #f7f7f7; font-size: 16px; line-height: 1.8; }
+.statistics-box p { margin: 5px 0; }
 </style>
 
 </body>
