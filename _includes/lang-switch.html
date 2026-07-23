@@ -46,7 +46,7 @@
     document.querySelectorAll('.author__urls-wrapper li').forEach(function(li) {
       var t = li.textContent;
       if (t.indexOf("Xi'an") >= 0 || t.indexOf("Xi\u2019an") >= 0) {
-        li.innerHTML = li.innerHTML.replace(/Xi'?an(,\s*(China|中国))?/gi, '西安，中国');
+        li.innerHTML = li.innerHTML.replace(/Xi'?an(,\s*(China|中国))?/gi, '西安 · 中国');
       }
     });
 
