@@ -34,44 +34,19 @@ layout: compress
 
           <hr>
 
-          <!-- GoatCounter Analytics -->
-          <script data-goatcounter="https://johnmccart.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-
-          <!-- Website Visitor Statistics -->
           <div class="visitor-statistics">
             <h3>💻 <span class="stat-en">Website Statistics</span><span class="stat-zh" style="display:none">网站统计</span></h3>
             <div class="statistics-box">
-              <p>👤 <span class="stat-en">Visitors:</span><span class="stat-zh" style="display:none">访问人数:</span> <span id="visitor-count">--</span></p>
-              <p>👀 <span class="stat-en">Page Views:</span><span class="stat-zh" style="display:none">页面浏览量:</span> <span id="pageview-count">--</span></p>
+              <p>👤 <span class="stat-en">Visitors:</span><span class="stat-zh" style="display:none">访问人数:</span> <span id="busuanzi_value_site_uv">--</span></p>
+              <p>👀 <span class="stat-en">Page Views:</span><span class="stat-zh" style="display:none">页面浏览量:</span> <span id="busuanzi_value_site_pv">--</span></p>
             </div>
           </div>
 
-          <!-- Busuanzi counters -->
-          <span id="busuanzi_value_site_uv" style="display:none"></span>
-          <span id="busuanzi_value_site_pv" style="display:none"></span>
-          <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-          <script>
-          (function() {
-            var pv = localStorage.getItem("pageview_count");
-            var uv = localStorage.getItem("visitor_count");
-            if (pv) document.getElementById("pageview-count").textContent = pv;
-            if (uv) document.getElementById("visitor-count").textContent = uv;
-            setTimeout(function() {
-              var bspv = document.getElementById("busuanzi_value_site_pv");
-              var bsuv = document.getElementById("busuanzi_value_site_uv");
-              if (bspv && bspv.textContent && bspv.textContent !== "") {
-                document.getElementById("pageview-count").textContent = bspv.textContent;
-                localStorage.setItem("pageview_count", bspv.textContent);
-              }
-              if (bsuv && bsuv.textContent && bsuv.textContent !== "") {
-                document.getElementById("visitor-count").textContent = bsuv.textContent;
-                localStorage.setItem("visitor_count", bsuv.textContent);
-              }
-            }, 3000);
-          })();
-          </script>
+          <!-- GoatCounter Analytics -->
+          <script data-goatcounter="https://johnmccart.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-        </section>
+          <!-- Busuanzi Counter -->
+          <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
       </div>
 
