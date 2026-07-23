@@ -65,23 +65,23 @@ layout: compress
 
 
           <script>
-          // Fetch total site count from GoatCounter public counter
+          // Simple localStorage-based visitor/pageview counter
           (function() {
-            fetch("https://johnmccart.goatcounter.com/counter//count.json")
-              .then(function(r) { return r.json(); })
-              .then(function(data) {
-                var c = data.count || "--";
-                document.getElementById("visitor-count").textContent = c;
-                document.getElementById("pageview-count").textContent = c;
-                localStorage.setItem("goatcounter_count", c);
-              })
-              .catch(function() {
-                var c = localStorage.getItem("goatcounter_count");
-                if (c) {
-                  document.getElementById("visitor-count").textContent = c;
-                  document.getElementById("pageview-count").textContent = c;
-                }
-              });
+            // Page views: increment on every page load
+            var pv = parseInt(localStorage.getItem("pageview_count") || "0", 10) + 1;
+            localStorage.setItem("pageview_count", pv);
+            document.getElementById("pageview-count").textContent = pv;
+
+            // Visitors: check if this is a known device with a recent visit
+            var today = new Date().toDateString();
+            var lastVisit = localStorage.getItem("last_visit");
+            var uv = parseInt(localStorage.getItem("visitor_count") || "0", 10);
+            if (lastVisit !== today) {
+              uv += 1;
+              localStorage.setItem("visitor_count", uv);
+              localStorage.setItem("last_visit", today);
+            }
+            document.getElementById("visitor-count").textContent = uv;
           })();
           </script>
         </section>
