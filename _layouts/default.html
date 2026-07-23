@@ -72,6 +72,26 @@ layout: compress
           </script>
 
 
+          <script>
+          (function() {
+            var uv = document.getElementById("busuanzi_value_site_uv");
+            if (uv && uv.textContent.trim() === "--") {
+              var cached = localStorage.getItem("visitor_count");
+              if (cached) uv.textContent = cached;
+            }
+            var pv = document.getElementById("busuanzi_value_site_pv");
+            if (pv && pv.textContent.trim() === "--") {
+              var cached = localStorage.getItem("pageview_count");
+              if (cached) pv.textContent = cached;
+            }
+            setTimeout(function() {
+              var uv2 = document.getElementById("busuanzi_value_site_uv");
+              var pv2 = document.getElementById("busuanzi_value_site_pv");
+              if (uv2 && uv2.textContent.trim() !== "--") localStorage.setItem("visitor_count", uv2.textContent.trim());
+              if (pv2 && pv2.textContent.trim() !== "--") localStorage.setItem("pageview_count", pv2.textContent.trim());
+            }, 5000);
+          })();
+          </script>
         </section>
 
       </div>
@@ -83,6 +103,7 @@ layout: compress
 
   {% include scripts.html %}
   {% include lang-switch.html %}
+
 
 
 <style>
