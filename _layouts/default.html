@@ -32,17 +32,8 @@ layout: compress
 
           {{ content }}
 
-          <hr>
-
-          <div class="visitor-statistics">
-            <h3>💻 <span class="stat-en">Website Statistics</span><span class="stat-zh" style="display:none">网站统计</span></h3>
-            <div class="statistics-box">
-              <p>👤 <span class="stat-en">Visitors:</span><span class="stat-zh" style="display:none">访问人数:</span> <span id="busuanzi_value_site_uv">--</span></p>
-              <p>👀 <span class="stat-en">Page Views:</span><span class="stat-zh" style="display:none">页面浏览量:</span> <span id="busuanzi_value_site_pv">--</span></p>
-            </div>
-          </div>
-
-          <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+          <!-- GoatCounter Analytics -->
+          <script data-goatcounter="https://johnmccart.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
       </div>
 
@@ -52,13 +43,6 @@ layout: compress
 
   {% include scripts.html %}
   {% include lang-switch.html %}
-
-<style>
-.visitor-statistics { text-align: center; margin-top: 40px; margin-bottom: 30px; }
-.visitor-statistics h3 { margin-bottom: 25px; }
-.statistics-box { display: inline-block; padding: 15px 35px; border-radius: 12px; background: #f7f7f7; font-size: 16px; line-height: 1.8; }
-.statistics-box p { margin: 5px 0; }
-</style>
 
 </body>
 </html>
