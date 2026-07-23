@@ -37,16 +37,26 @@ layout: compress
           <div class="visitor-statistics">
             <h3>💻 <span class="stat-en">Website Statistics</span><span class="stat-zh" style="display:none">网站统计</span></h3>
             <div class="statistics-box">
-              <p>👤 <span class="stat-en">Visitors:</span><span class="stat-zh" style="display:none">访问人数:</span> <span id="busuanzi_value_site_uv">--</span></p>
-              <p>👀 <span class="stat-en">Page Views:</span><span class="stat-zh" style="display:none">页面浏览量:</span> <span id="busuanzi_value_site_pv">--</span></p>
+              <p>👤 <span class="stat-en">Visitors:</span><span class="stat-zh" style="display:none">访问人数:</span> <span id="visitor-count">0</span></p>
+              <p>👀 <span class="stat-en">Page Views:</span><span class="stat-zh" style="display:none">页面浏览量:</span> <span id="pageview-count">0</span></p>
             </div>
           </div>
 
+          <script>
+          (function() {
+            var pv = parseInt(localStorage.getItem("pageviews") || "0", 10) + 1;
+            localStorage.setItem("pageviews", pv);
+            document.getElementById("pageview-count").textContent = pv;
+            var today = new Date().toDateString();
+            var last = localStorage.getItem("last_visit");
+            var uv = parseInt(localStorage.getItem("visitors") || "0", 10);
+            if (last !== today) { uv += 1; localStorage.setItem("visitors", uv); localStorage.setItem("last_visit", today); }
+            document.getElementById("visitor-count").textContent = uv;
+          })();
+          </script>
+
           <!-- GoatCounter Analytics -->
           <script data-goatcounter="https://johnmccart.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-
-          <!-- Busuanzi Counter -->
-          <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
       </div>
 
