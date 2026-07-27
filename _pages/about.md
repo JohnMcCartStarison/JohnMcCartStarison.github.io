@@ -76,8 +76,8 @@ PEM fuel cells[J]. **Chinese Journal of Power Sources**,2025,49(03):596-607. [Vi
 - Participated in building and maintaining the stack testing platform
 
 # 🎖 Honors and Awards
-- *2026.07* **Outstanding master's thesis**.
-- *2026.06* Outstanding graduate cadre, XJTU.
+- *2026.07* **Outstanding Master's Thesis**.
+- *2026.06* Graduate Cadre with Honor, XJTU.
 - *2026.04* One Chen, Three Liu, One Gu (Chen Jidan, Liu Ziyu, Liu Qichang, Liu Yaonan, Gu Zhenjun): Second-Class Scholarship.
 - *2025.11* **National Scholarship**.
 - *2025.09* National Second Prize, The 12th China Graduate Energy Equipment Innovation Design Competition.
