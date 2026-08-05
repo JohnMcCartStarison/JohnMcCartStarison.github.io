@@ -26,6 +26,7 @@ My research interests include:
 
 
 # 🔥 News 
+- *2026.06*: Congratulations to myself on successfully completing my master’s degree. I sincerely appreciate the guidance and support from my two esteemed supervisors throughout this academic journey!
 - *2026.06*: &nbsp;🎉🎉 Congratulations to Prof. Lei Fu on the acceptance of his paper by **Nature Communications** (IF = 18.1).
 - *2025.11*: &nbsp;🎉🎉 A paper of mine has been accepted by **International Journal of Hydrogen Energy** (IF = 8.3). 
 
@@ -41,7 +42,7 @@ energy systems[J]. **Journal of Xi'an Jiaotong University**,2026,60(04):72-83. [
 - Zitong Qiu, Xiaotong Zhang, Yangyang Ge, Ruhuan Li, Haonan Li, **Chengze Ji**, Kai Wu, Jun Zhou. Modeling and efficiency analysis of switching process in reversible
 PEM fuel cells[J]. **Chinese Journal of Power Sources**,2025,49(03):596-607. [View Paper →](https://doi.org/10.3969/j.issn.1002-087X.2025.03.018)
 - Junbo Wang, Ke Deng, Hongfei Zhao, Qi Tang, Yin Zhang, **Chengze Ji**, Jun Zhou<sup>[📧](mailto:zhoujun@mail.xjtu.edu.cn)</sup>. Design and electric field simulation of porous electrodes for solid oxide electrolysis cell based on multiscale modeling[J]. **Journal of Ceramics**,2026,47(01):149-158. [View Paper →](https://doi.org/10.13957/j.cnki.tcxb.2026.01.016)
-.
+
 
 
 
