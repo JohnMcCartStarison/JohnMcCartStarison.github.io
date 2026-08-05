@@ -24,6 +24,7 @@ author_profile: true
 
 <span class="anchor" id="-news"></span>
 # 🔥 新闻动态
+- *2026.06*: 祝贺自己顺利硕士毕业，并衷心感谢两位尊敬的导师在我的学术生涯中给予我的指导和支持。
 - *2026.06*: &nbsp;🎉🎉 祝贺付磊老师的论文被 **Nature Communications**（IF = 18.1）接收。
 - *2025.11*: &nbsp;🎉🎉 本人论文被 **International Journal of Hydrogen Energy**（IF = 8.3）接收。
 
