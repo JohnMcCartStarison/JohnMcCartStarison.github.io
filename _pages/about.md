@@ -26,7 +26,8 @@ My research interests include:
 
 
 # 🔥 News 
-- *2026.06*: Congratulations to myself on successfully completing my master’s degree. I sincerely appreciate the guidance and support from my two esteemed supervisors throughout this academic journey!
+- *2026.09*: &nbsp;🎉🎉 Congratulations to Dr. Ruhuan Li on the acceptance of his paper by **Renewable Energy** (IF = 9.1).
+- *2026.06*: Congratulations to myself on completing my master’s degree. I sincerely appreciate the guidance and support from my two esteemed supervisors throughout this academic journey!
 - *2026.06*: &nbsp;🎉🎉 Congratulations to Prof. Lei Fu on the acceptance of his paper by **Nature Communications** (IF = 18.1).
 - *2025.11*: &nbsp;🎉🎉 A paper of mine has been accepted by **International Journal of Hydrogen Energy** (IF = 8.3). 
 
