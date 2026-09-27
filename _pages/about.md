@@ -19,7 +19,7 @@ redirect_from:
 
 My research interests include: 
 1. Electro–hydrogen synergy technologies,
-2. Optimization of virtual power plants and integrated energy systems,
+2. Optimization of integrated energy systems,
 3. Applications of artificial intelligence in power systems.
 
 
